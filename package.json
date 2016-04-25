@@ -1,0 +1,32 @@
+{
+  "name": "frontend-union-conf-2016",
+  "version": "1.0.0",
+  "description": "Frontend Union is an organization, that brings together several communities to create unique conference.",
+  "main": "index.html",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "postcss": "^5.0.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontend-union-conf/func2016.git"
+  },
+  "keywords": [
+    "frontend",
+    "conference"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frontend-union-conf/func2016/issues"
+  },
+  "homepage": "https://github.com/frontend-union-conf/func2016#readme"
+}
