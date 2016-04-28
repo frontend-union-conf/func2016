@@ -64,7 +64,7 @@ gulp.task('styles', () => {
         path: svgPath.folder
       }),
       require('postcss-svgo') // optimise inline SVG
-    ]))
+    ])).on('error', log)
     .pipe(gulp.dest(stylePath.tmp))
     .pipe(reload({stream: true}));
 });
