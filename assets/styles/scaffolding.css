@@ -1,0 +1,36 @@
+:root {
+  --fontFamily: Helvetica, Arial, sans-serif;
+  --fontSize: 1.4rem;
+  --lineHeight: 1.5;
+  --color: black;
+  --minWidth: 320px;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: var(--minWidth);
+
+  color: var(--color);
+
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  font-weight: 400;
+  line-height: var(--lineHeight);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

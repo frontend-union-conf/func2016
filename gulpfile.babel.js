@@ -8,14 +8,18 @@ import del from 'del';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+const development = $.environments.development;
+const production = $.environments.production;
+
 const assetsPath = {
   src: 'assets',
+  tmp: '.tmp',
   dest: 'build/assets'
 };
 
 const stylePath = {
   src: `${assetsPath.src}/styles/**/*.css`,
-  tmp: `.tmp/${assetsPath.src}/styles/`,
+  tmp: `${assetsPath.tmp}/${assetsPath.src}/styles/`,
   dest: `${assetsPath.dest}/styles/`
 };
 
@@ -36,6 +40,7 @@ const svgPath = {
 
 const scriptsPath = {
   src: `${assetsPath.src}/scripts/**.js`,
+  tmp: `${assetsPath.tmp}/${assetsPath.src}/scripts/`,
   dest: `${assetsPath.dest}/scripts/`
 };
 
@@ -49,23 +54,20 @@ function log() {
 };
 
 gulp.task('styles', () => {
-  return gulp.src(stylePath.src)
+  return gulp.src(`${assetsPath.src}/styles/**/*.css`)
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
       require('postcss-normalize'), // latest normalize.css
       require('postcss-normalize-charset'), // @charset "utf-8"
-      require('postcss-cssnext')(),
-      /*
-      require('postcss-mixins'),
-      require('postcss-nested'),
-      require('postcss-custom-properties')
-      */
+      require('postcss-cssnext')(), // http://cssnext.io/features/
       require('postcss-inline-svg')({ // inline SVG
         path: svgPath.folder
       }),
       require('postcss-svgo') // optimise inline SVG
     ])).on('error', log)
-    .pipe(gulp.dest(stylePath.tmp))
+    .pipe(production($.csso()))
+    .pipe(development(gulp.dest(stylePath.tmp)))
+    .pipe(production(gulp.dest(stylePath.dest)))
     .pipe(reload({stream: true}));
 });
 
@@ -92,16 +94,32 @@ gulp.task('images', () => {
     .pipe(gulp.dest(imagesPath.dest));
 });
 
+gulp.task('html', () => {
+  return gulp.src('*.html')
+    .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('scripts', () => {
+  return gulp.src(scriptsPath.src)
+    .pipe(development($.sourcemaps.init()))
+    //.pipe($.concat('bundle.js'))
+    .pipe($.babel())
+    .pipe(development($.sourcemaps.write('.')))
+    .pipe(production($.uglify()))
+    .pipe(development(gulp.dest(scriptsPath.tmp)))
+    .pipe(production(gulp.dest(scriptsPath.dest)))
+    .pipe(reload({stream: true}));
+});
+
 gulp.task("copy", () => {
-  gulp.src("*.html").pipe(gulp.dest("build"));
   gulp.src(fontsPath.src).pipe(gulp.dest(fontsPath.dest));
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
-  gulp.src(scriptsPath.src).pipe(gulp.dest(scriptsPath.dest));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
 
-gulp.task('serve', ['styles'], () => {
+gulp.task('serve', ['styles', 'scripts'], () => {
   browserSync({
     server: [".tmp", "."],
     notify: false,
@@ -114,10 +132,14 @@ gulp.task('serve', ['styles'], () => {
   gulp.watch("*.html").on('change', reload);
 });
 
-gulp.task('build', ['images', 'copy'], () => {
+gulp.task('set-production', function() {
+  return $.environments.current(production);
+});
+
+gulp.task('prod', ['styles', 'scripts', 'html', 'images', 'copy'], () => {
   return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('default', ['clean'], () => {
-  gulp.start('build');
+gulp.task('default', ['clean', 'set-production'], () => {
+  gulp.start('prod');
 });
