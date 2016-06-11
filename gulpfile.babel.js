@@ -11,37 +11,31 @@ const reload = browserSync.reload;
 const development = $.environments.development;
 const production = $.environments.production;
 
-const assetsPath = {
-  src: 'assets',
-  tmp: '.tmp',
-  dest: 'build/assets'
-};
-
 const stylePath = {
-  src: `${assetsPath.src}/styles/**/*.css`,
-  tmp: `${assetsPath.tmp}/${assetsPath.src}/styles/`,
-  dest: `${assetsPath.dest}/styles/`
+  src: `assets/styles/**/*.pcss`,
+  tmp: `.tmp/assets/styles/`,
+  dest: `build/assets/styles/`
 };
 
 const imagesPath = {
-  src: `${assetsPath.src}/images/**/*.{png,jpg,gif,svg}`,
-  dest: `${assetsPath.dest}/images/`
+  src: `assets/images/**/*.{png,jpg,gif,svg}`,
+  dest: `build/assets/images/`
 };
 
 const fontsPath = {
-  src: `${assetsPath.src}/fonts/**/*.{woff,woff2}`,
-  dest: `${assetsPath.dest}/fonts/`
+  src: `assets/fonts/**/*.{woff,woff2}`,
+  dest: `build/assets/fonts/`
 };
 
 const svgPath = {
-  src: `${assetsPath.src}/svg/**/*.svg`,
-  folder: `${assetsPath.dest}/svg/`
+  src: `assets/svg/**/*.svg`,
+  folder: `build/assets/svg/`
 };
 
 const scriptsPath = {
-  src: `${assetsPath.src}/scripts/**.js`,
-  tmp: `${assetsPath.tmp}/${assetsPath.src}/scripts/`,
-  dest: `${assetsPath.dest}/scripts/`
+  src: `assets/scripts/**.js`,
+  tmp: `.tmp/assets/scripts/`,
+  dest: `build/assets/scripts/`
 };
 
 function log() {
@@ -54,7 +48,7 @@ function log() {
 };
 
 gulp.task('styles', () => {
-  return gulp.src(`${assetsPath.src}/styles/**/*.css`)
+  return gulp.src(stylePath.src)
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
       require('postcss-normalize'), // latest normalize.css
