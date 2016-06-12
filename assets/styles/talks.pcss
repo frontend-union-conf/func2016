@@ -1,0 +1,28 @@
+.talks {
+  margin-bottom: 14.1rem;
+}
+
+.talks__inner {
+  @mixin containerMain;
+
+  column-count: 3;
+  column-gap: 0;
+}
+
+.talks__item {
+  break-inside: avoid;
+
+  &--colored {
+    background: #f8f8f8;
+  }
+
+  &:first-child {
+    background: url("../images/bg-talks-v1.png") 0 0 no-repeat;
+    padding-top: 12.5rem;
+  }
+
+  &:nth-child(6) {
+    background: url("../images/bg-talks-v2.png") 0 0 no-repeat;
+    padding-top: 12.5rem;
+  }
+}

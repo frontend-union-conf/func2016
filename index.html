@@ -4,21 +4,229 @@
 <head>
   <meta charset="utf-8">
   <title>Frontend Union Conf 2016</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="assets/styles/bundle.css">
 </head>
 
 <body>
   <header class="header">
-    <h1>Hello world!</h1>
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <img class="header__logo-pic" src="assets/images/func.svg" width="165" height="74" alt="Frontend Union Conf" />
+      </h1>
+      <nav class="header__navigation">
+        <ul class="topnav">
+          <li class="topnav__item">
+            <a class="topnav__link" href="#">About</a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link" href="#">Speakers</a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link" href="#">Programme</a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link" href="#">Location</a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link topnav__link--outline" href="#">Registration</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="switcher">
+        <a class="switcher__link" href="#">Ru</a>/<a class="switcher__link switcher__link--active" href="#">Eng</a>
+      </div>
+    </div>
   </header>
-  <main class="main">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+
+  <main class="content">
+
+    <section class="intro">
+      <div class="intro__inner">
+        <h2 class="intro__title">
+          <div class="intro__title-text">Create Collaborative Applications Using Diffsync</div>
+        </h2>
+        <img class="intro__pic" src="assets/images/content/intro.jpg" width="825" height="643" alt="Intro image" />
+      </div>
+    </section>
+
+    <section class="colorful">
+      <div class="colorful__inner">
+        <div class="colorful__container">
+          <div class="colorful__content">
+            <h2 class="colorful__title">About</h1>
+            <div class="colorful__text">
+              <p>
+                Frontend Union is an organization, that brings together several communities to create unique conference. We focus on two things, sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_
+              </p>
+            </div>
+          </div>
+          <div class="colorful__more">
+            <a class="link-vertical link-vertical--right" href="#">More about team</a>
+          </div>
+          <div class="colorful__social">
+            <div class="stay-tuned">
+              <span class="stay-tuned__heading">
+                Stay tuned bro
+              </span>
+              <a class="stay-tuned__link stay-tuned__link--fb" href="#">
+                <span class="stay-tuned__text">Facebook</span>
+              </a>
+              <a class="stay-tuned__link stay-tuned__link--tw" href="#">
+                <span class="stay-tuned__text">Twitter</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="talks">
+      <div class="talks__inner">
+
+        <div class="talks__item">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              Living Style guides are a new frontend development trend. The next logical step is to develop the components to turn them into sandboxes for new interfaces. By adopting such workflow, the developers will be able to stop “developing the pages” and move to developing independent components that constitute pages. Development effort will get a considerable speed and quality boost. This talk is based on the experience of two Finnish companies – SC5 Online и Elisa – that promote this philosophy with their own open source tools.
+            </div>
+          </article>
+        </div>
+
+        <div class="talks__item talks__item--colored">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              You probably had a chance to work on asynchronous code. It takes a lot of time to read, understand, debug it.  There are hundreds of articles and tutorials offering insights into making asynchronous programming easier: promises, generators, co, thunkify, babel,... How can one grasp it all? I will be talking about the evolution of asynchronous programming in simple words, offering examples and drawings. Which libraries are fit for which situations – according to my experience? I will try to make your asynchronous code simpler! :)
+            </div>
+          </article>
+        </div>
+
+        <div class="talks__item talks__item--colored">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              React is a powerful tool for creating dynamic web-apps. While isomorphic projects grow in popularity, testing them still summons a soft quake in the minds of developers. What tools to use and how to use them? What to be afraid of? Where to look for answers?
+            </div>
+          </article>
+        </div>
+
+        <div class="talks__item">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              Data synchronization algorithms have been around for a quite a while. The first papers on this topic have been published in 1989 and the algorithm (Operational Transformation) that is derived from this paper is the de-facto standard for many collaborative applications.
+In 2009, a new algorithm (Differential Synchronization) has been introduced that simplifies and enhances synchronization. In this talk I will explain this algorithm and show how it can be used in your web applications. I wrote a node module that allows you to easily add collaborative features to your web app using this new technique.
+            </div>
+          </article>
+        </div>
+
+        <div class="talks__item talks__item--colored">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              jQuery, thank you for providing cross-browser compatibility and convenient plugins, but it is time to move on and write in “real” JS.
+My talk is dedicated to gradually abandoning jQuery in favor of pure JS.
+            </div>
+          </article>
+        </div>
+
+        <div class="talks__item">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              Nowadays lots of users store their private data in the Internet. Users have developed the habit of syncing all their photos, contacts or even credit card stuff via clouds. We, the web developers, have to give them confidence in their data’s protection and make sure it will never be stolen by a bunch of people in masks. I'll reveal the secrets of XSS attacks and the methods of defense against them. I'll also introduce a couple of examples to improve your awareness: how easy it is to execute an XSS attack; and how you can protect the privacy of your users by employing different tools such as CSP, X-Frame-Options, X-XSS-Protection and others. It will be a lot of fun.
+            </div>
+          </article>
+        </div>
+
+        <div class="talks__item talks__item--colored">
+          <article class="talk">
+            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
+            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
+            <div class="talk__speaker">
+              Varvara Stepanova
+            </div>
+            <div class="talk__speaker-about">
+              @toivonens, HelsinkiJS
+            </div>
+            <div class="talk__description">
+              If you ever took an interest in testing, you probably know how to test a TODO app (no less than one in every three testing-related articles tells about that) or remember Wikipedia definitions of TDD and Unit Testing by heart. So I will not be speaking about that. I will offer you three stories from project's life and how testing is involved with it. These stories teach how to start writing tests, how to maintain them — and how to preserve your faith.
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
   </main>
+
   <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__item">
+        <div class="branding">
+          <a class="branding__link" href="https://www.facebook.com/headexchangeteam/" target="_blank">
+            <img class="branding__logo" src="assets/images/hex.svg" width="136" height="21" alt="Hæd Exchange" />
+          </a>
+          <div class="branding__slogan">
+            Branding, Design, Coding
+          </div>
+        </div>
+      </div>
+      <div class="footer__item">
+        Code of Conduct
+      </div>
+      <div class="footer__item">
+        <div class="footer__colored">
+          Idea by Andrey Salomatin
+        </div>
+        2015 August
+      </div>
+    </div>
   </footer>
 </body>
 

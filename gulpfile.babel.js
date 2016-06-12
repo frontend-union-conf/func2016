@@ -54,6 +54,7 @@ gulp.task('styles', () => {
       require('postcss-normalize'), // latest normalize.css
       require('postcss-normalize-charset'), // @charset "utf-8"
       require('postcss-cssnext')(), // http://cssnext.io/features/
+      require('postcss-mixins'),
       require('postcss-inline-svg')({ // inline SVG
         path: svgPath.folder
       }),

@@ -1,0 +1,28 @@
+.topnav {
+  list-style: none;
+  display: flex;
+}
+
+.topnav__item {
+  margin-left: 1rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.topnav__link {
+  @mixin headerFont;
+
+  padding: 0.7rem 1.2rem 0.7rem;
+
+  &:hover,
+  &:focus {
+    color: var(--colorBrand);
+  }
+
+  &--outline {
+    border: 0.3rem solid var(--colorBrand);
+    margin-left: 1.4rem;
+  }
+}

@@ -1,0 +1,85 @@
+.colorful {
+  --decorationWidth: 20rem;
+  --paddingLeftContent: 2rem;
+
+  padding-top: 10.5rem;
+  padding-bottom: 12.6rem;
+  background: var(--colorBrand);
+  color: var(--colorOpposite);
+}
+
+.colorful__inner {
+  @mixin containerMain;
+  padding-right: var(--decorationWidth);
+  padding-left: 12.5rem;
+}
+
+.colorful__container {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: var(--decorationWidth);
+    height: 76.4rem;
+
+    background: url("../images/decoration.jpg") 0 0 no-repeat;
+    background-size: contain;
+  }
+}
+
+.colorful__content {
+  font-size: 1.8rem;
+  font-family: var(--fontFamilyMono);
+  line-height: 1.6;
+  padding-right: 27%;
+}
+
+.colorful__title {
+  display: inline;
+  font-weight: 400;
+  font-size: inherit;
+  font-family: inherit;
+
+  &::before {
+    content: "(";
+  }
+  &::after {
+    content: ")";
+  }
+}
+
+.colorful__text {
+  display: inline;
+
+  &::before {
+    content: "{";
+  }
+  &::after {
+    content: "}";
+  }
+  & p {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    padding-left: var(--paddingLeftContent);
+  }
+}
+
+.colorful__more {
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  font-size: 1rem;
+
+  position: absolute;
+  bottom: 3rem;
+  right: 5.6rem;
+}
+
+.colorful__social {
+  margin-top: 10.5rem;
+  padding-left: var(--paddingLeftContent);
+}

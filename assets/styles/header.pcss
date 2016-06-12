@@ -1,3 +1,32 @@
 .header {
+  background: #fff;
   color: var(--color);
+
+  position: relative;
+  z-index: 1;
+}
+
+.header__inner {
+  @mixin containerMain;
+
+  display: flex;
+  align-items: center;
+  padding-right: 2.8rem;
+  padding-left: 2.8rem;
+
+  &::after {
+    display: block;
+    min-height: 12.5rem;
+    content: "";
+  }
+}
+
+.header__logo {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: var(--fontFamilyMono);
+}
+
+.header__navigation {
+  margin-left: auto;
 }

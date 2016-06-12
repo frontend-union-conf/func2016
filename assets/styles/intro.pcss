@@ -1,0 +1,43 @@
+.intro {
+  background: var(--colorBrand);
+  color: var(--colorOpposite);
+
+  padding-bottom: 12.5rem;
+}
+
+.intro__inner {
+  @mixin containerMain;
+  padding-right: var(--decorationWidth);
+  position: relative;
+  min-height: 64.3rem;
+
+  padding-top: 10.4rem;
+}
+
+.intro__pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.intro__title {
+  font-size: 3.8rem;
+  font-family: var(--fontFamilyMono);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  padding-right: 40%;
+  padding-left: 10.1rem;
+  margin: 0;
+
+  &::before {
+    content: "{";
+  }
+  &::after {
+    content: "}";
+  }
+}
+
+.intro__title-text {
+  margin-left: 4.5rem;
+}

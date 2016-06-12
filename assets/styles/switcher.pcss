@@ -1,0 +1,26 @@
+.switcher {
+  margin-left: 3rem;
+  color: #acacac;
+}
+
+.switcher__link {
+  @mixin headerFont;
+  padding: 0.6rem;
+
+  &:hover,
+  &:focus {
+    color: var(--colorBrand);
+  }
+
+  &--active {
+    color: #acacac;
+
+    cursor: default;
+    pointer-events: none;
+
+    &:hover,
+    &:focus {
+      color: #acacac;
+    }
+  }
+}

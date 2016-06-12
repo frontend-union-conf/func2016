@@ -1,9 +1,16 @@
 :root {
-  --fontFamily: Helvetica, Arial, sans-serif;
+  --fontFamily: 'PT Sans', Helvetica, Arial, sans-serif;
+  --fontFamilyMono: 'PT Mono', 'Courier New', Courier, monospace;
   --fontSize: 1.4rem;
   --lineHeight: 1.5;
+
   --color: black;
-  --minWidth: 320px;
+  --colorBrand: #00f;
+  --colorOpposite: white;
+
+  /*--minWidth: 320px;*/
+  --minWidth: 1024px;
+  --maxInnerWidth: 1024px;
 }
 
 html {
@@ -15,7 +22,9 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-*, :before, :after {
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 
