@@ -1,6 +1,7 @@
 .topnav {
   list-style: none;
   display: flex;
+  color: inherit;
 }
 
 .topnav__item {
@@ -13,16 +14,23 @@
 
 .topnav__link {
   @mixin headerFont;
+  color: inherit;
 
   padding: 0.7rem 1.2rem 0.7rem;
 
   &:hover,
   &:focus {
-    color: var(--colorBrand);
+    color: #acacac;
   }
 
   &--outline {
     border: 0.3rem solid var(--colorBrand);
     margin-left: 1.4rem;
+
+    &:hover,
+    &:focus {
+      color: var(--colorOpposite);
+      background: var(--colorBrand);
+    }
   }
 }

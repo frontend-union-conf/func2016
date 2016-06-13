@@ -51,10 +51,10 @@ gulp.task('styles', () => {
   return gulp.src(stylePath.src)
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
+      require('postcss-mixins'),
       require('postcss-normalize'), // latest normalize.css
       require('postcss-normalize-charset'), // @charset "utf-8"
       require('postcss-cssnext')(), // http://cssnext.io/features/
-      require('postcss-mixins'),
       require('postcss-inline-svg')({ // inline SVG
         path: svgPath.folder
       }),
@@ -124,6 +124,7 @@ gulp.task('serve', ['styles', 'scripts'], () => {
 
   gulp.watch(stylePath.src, ['styles-linter', 'styles']);
   gulp.watch(svgPath.src, ['styles']);
+  gulp.watch(scriptsPath.src, ['scripts']);
   gulp.watch("*.html").on('change', reload);
 });
 

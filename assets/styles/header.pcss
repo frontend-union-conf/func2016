@@ -1,9 +1,39 @@
+@keyframes smooth-entry {
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header {
   background: #fff;
-  color: var(--color);
+  color: #111;
 
   position: relative;
   z-index: 1;
+
+  &--sticky {
+    background: #111;
+    color: var(--colorOpposite);
+    animation: smooth-entry 0.2s;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    & .header__inner {
+      padding-left: 0;
+
+      &::after {
+        min-height: 7rem;
+      }
+    }
+  }
 }
 
 .header__inner {
@@ -25,6 +55,10 @@
   margin: 0;
   font-size: 1.6rem;
   font-family: var(--fontFamilyMono);
+}
+
+.header__logo-pic {
+  vertical-align: middle;
 }
 
 .header__navigation {

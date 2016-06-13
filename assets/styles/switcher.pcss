@@ -1,15 +1,16 @@
 .switcher {
   margin-left: 3rem;
-  color: #acacac;
+  color: inherit;
 }
 
 .switcher__link {
   @mixin headerFont;
+  color: inherit;
   padding: 0.6rem;
 
   &:hover,
   &:focus {
-    color: var(--colorBrand);
+    color: #acacac;
   }
 
   &--active {
@@ -23,4 +24,8 @@
       color: #acacac;
     }
   }
+}
+
+.switcher__separator {
+  color: #acacac;
 }
