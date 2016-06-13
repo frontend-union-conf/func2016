@@ -1,0 +1,15 @@
+node_modules
+bower_components
+test/bower_components
+
+.DS_Store
+Thumbs.db
+
+.idea
+*.sublime*
+
+*.log
+*.psd
+
+build
+.tmp
