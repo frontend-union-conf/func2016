@@ -51,6 +51,7 @@ gulp.task('styles', () => {
   return gulp.src(stylePath.src)
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
+      require('postcss-partial-import')({ extension: 'pcss' }),
       require('postcss-mixins'),
       require('postcss-normalize'), // latest normalize.css
       require('postcss-normalize-charset'), // @charset "utf-8"
