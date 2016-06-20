@@ -5,44 +5,26 @@
 }
 
 :root {
-  --decorationWidth: 20rem;
-  --paddingLeftContent: 2rem;
+  --paddingLeftContent: 2.2rem;
 }
 
 .colorful {
-  padding-top: 10.5rem;
-  padding-bottom: 12.6rem;
-  background: var(--colorBrand);
+  padding-top: 3.2rem;
+  padding-bottom: 16.3rem;
+  background: var(--colorDark);
   color: var(--colorOpposite);
 }
 
 .colorful__inner {
   @mixin containerMain;
-  padding-right: var(--decorationWidth);
-  padding-left: 12.5rem;
-}
-
-.colorful__container {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 100%;
-    width: var(--decorationWidth);
-    height: 76.4rem;
-
-    background: url("../images/decoration.jpg") 0 0 no-repeat;
-    background-size: contain;
-  }
+  padding-left: 22.2rem;
 }
 
 .colorful__content {
   font-size: 1.8rem;
   font-family: var(--fontFamilyMono);
   line-height: 1.6;
-  padding-right: 27%;
+  padding-right: 36%;
 }
 
 .colorful__title {
@@ -75,19 +57,7 @@
   }
 }
 
-.colorful__more {
-  color: inherit;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 700;
-  font-size: 1rem;
-
-  position: absolute;
-  bottom: 3rem;
-  right: 5.6rem;
-}
-
 .colorful__social {
-  margin-top: 10.5rem;
+  margin-top: 2.7rem;
   padding-left: var(--paddingLeftContent);
 }

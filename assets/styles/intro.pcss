@@ -1,41 +1,39 @@
 .intro {
-  background: var(--colorBrand);
   color: var(--colorOpposite);
 
-  padding-bottom: 12.5rem;
+  //transform: skew(0deg, -15deg);
+  //margin-top: 140px;
+
+  background-image: url('../images/skew.svg'), url('../images/rect.svg');
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, 100% 50%;
 }
 
 .intro__inner {
   @mixin containerMain;
-  padding-right: var(--decorationWidth);
   position: relative;
-  min-height: 64.3rem;
-
-  padding-top: 10.4rem;
+  min-height: 81rem;
+  margin-top: -4rem;
+  padding-top: 9.6rem;
 }
 
-.intro__pic {
-  position: absolute;
-  top: 0;
-  right: 0;
+.intro__content {
+  background: url('../images/illustration.png') 3.7rem 0 no-repeat;
+  width: 34.6rem;
+  padding-top: 15.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 44.2rem;
 }
 
 .intro__title {
-  font-size: 3.8rem;
+  font-size: 4rem;
   font-family: var(--fontFamilyMono);
-  line-height: 1.6;
+  line-height: 1.2;
   position: relative;
   z-index: 1;
-  padding-right: 40%;
-  padding-left: 10.1rem;
   margin: 0;
-
-  &::before {
-    content: "{";
-  }
-  &::after {
-    content: "}";
-  }
 }
 
 .intro__title-text {
