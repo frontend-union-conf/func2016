@@ -1,30 +1,56 @@
 @import "mixin";
 
 .talks {
-  margin-bottom: 14.1rem;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  background: url('../images/skew-gray.svg') no-repeat 0 center;
+  background-size: 100% 50%;
 }
 
 .talks__inner {
   @mixin containerMain;
+  padding-left: 9rem;
+  padding-right: 12.6rem;
 
-  column-count: 3;
-  column-gap: 0;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.talks__column {
+  width: 50%;
+
+  &:first-child {
+    & .talks__item {
+      &:nth-child(even) {
+        width: 31rem;
+        & .talk__speaker-photo {
+          width: 21.9rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+
+    & .talks__item {
+      margin-top: 40px;
+      &:nth-child(odd) {
+        width: 31rem;
+        margin-left: auto;
+        & .talk__speaker-photo {
+          width: 21.9rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
 }
 
 .talks__item {
-  break-inside: avoid;
-
-  &--colored {
-    background: #f8f8f8;
-  }
-
-  &:first-child {
-    background: url("../images/bg-talks-v1.png") 0 0 no-repeat;
-    padding-top: 12.5rem;
-  }
-
-  &:nth-child(6) {
-    background: url("../images/bg-talks-v2.png") 0 0 no-repeat;
-    padding-top: 12.5rem;
-  }
+  margin-bottom: 8rem;
+  margin-left: 3.6rem;
 }

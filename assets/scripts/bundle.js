@@ -1,4 +1,15 @@
+import SimpleMasonry from 'simple-masonry';
+
 'use strict';
+
+let simpleM = new SimpleMasonry({
+  masonryBox: '.talks__inner',
+  masonryColumn: '.talks__column'
+});
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  simpleM.init();
+});
 
 (() => {
 

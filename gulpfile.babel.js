@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
+import babelify from 'babelify';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -97,11 +98,11 @@ gulp.task('html', () => {
 });
 
 gulp.task('scripts', () => {
-  return gulp.src(scriptsPath.src)
-    .pipe(development($.sourcemaps.init()))
-    //.pipe($.concat('bundle.js'))
-    .pipe($.babel())
-    .pipe(development($.sourcemaps.write('.')))
+  return gulp.src('./assets/scripts/bundle.js')
+    .pipe($.browserify({
+      transform: ['babelify'],
+      debug: development()
+    }))
     .pipe(production($.uglify()))
     .pipe(development(gulp.dest(scriptsPath.tmp)))
     .pipe(production(gulp.dest(scriptsPath.dest)))

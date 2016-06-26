@@ -1,0 +1,27 @@
+.contacts__map {
+  height: 40.6rem;
+  background: #f2f2f2;
+  background: url('../images/map.jpg') no-repeat center;
+}
+
+.contacts__inner {
+  @mixin containerMain;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  display: flex;
+  padding-left: 6.6rem;
+}
+
+.contacts__item {
+  max-width: 25.6rem;
+  margin-left: 13.4rem;
+
+  & a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
