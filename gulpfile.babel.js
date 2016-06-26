@@ -25,6 +25,7 @@ const imagesPath = {
 
 const fontsPath = {
   src: `assets/fonts/**/*.{woff,woff2}`,
+  style: `assets/fonts/*.css`,
   dest: `build/assets/fonts/`
 };
 
@@ -114,6 +115,12 @@ gulp.task("copy", () => {
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
 });
 
+gulp.task('fonts', () => {
+  return gulp.src(fontsPath.style)
+    .pipe($.csso())
+    .pipe(gulp.dest(fontsPath.dest));
+});
+
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
 
 gulp.task('serve', ['styles', 'scripts'], () => {
@@ -134,7 +141,7 @@ gulp.task('set-production', function() {
   return $.environments.current(production);
 });
 
-gulp.task('prod', ['styles', 'scripts', 'html', 'images', 'copy'], () => {
+gulp.task('prod', ['styles', 'fonts', 'scripts', 'html', 'images', 'copy'], () => {
   return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
