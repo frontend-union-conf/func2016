@@ -1,0 +1,23 @@
+.secondary-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  column-count: 3;
+  column-gap: 6rem;
+
+  &__item {
+    margin-bottom: 0.4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: var(--colorBrand);
+    }
+  }
+}

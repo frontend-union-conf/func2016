@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('Circe-Regular.woff2') format('woff2'),
+       url('Circe-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+    src: local('PT Sans Bold'),
+         local('PTSans-Bold'),
+         url('PTSans-Bold.woff2') format('woff2'),
+         url('PTSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Mono';
+    src: local('PT Mono'),
+         local('PTMono-Regular'),
+         url('PTMono-Regular.woff2') format('woff2'),
+         url('PTMono-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Mono';
+    src: local('PT Mono Bold'),
+         local('PTMono-Bold'),
+         url('PTMono-Bold.woff2') format('woff2'),
+         url('PTMono-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

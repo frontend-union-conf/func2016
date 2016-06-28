@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <title>Frontend Union Conf 2016</title>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="assets/styles/bundle.css">
 </head>
 
@@ -35,9 +34,9 @@
           <!-- <li class="topnav__item">
             <a class="topnav__link" href="#">Programme</a>
           </li> -->
-          <li class="topnav__item">
+          <!-- <li class="topnav__item">
             <a class="topnav__link" href="#locationSection">Location</a>
-          </li>
+          </li> -->
           <li class="topnav__item">
             <a class="topnav__link topnav__link--outline" href="https://ti.to/frontend-union/2016/" target="_blank">Registration</a>
           </li>
@@ -60,9 +59,9 @@
           </h1>
           <div class="infobox">
             <div class="infobox__item">
-              Vilnius
+              Menų
               <br>
-              center
+              spaustuvė
             </div>
             <div class="infobox__item">
               27/08/2016
@@ -78,10 +77,10 @@
       <div class="colorful__inner">
         <div class="colorful__container">
           <div class="colorful__content">
-            <h2 class="colorful__title" id="aboutSection">About</h1>
+            <h2 class="colorful__title" id="aboutSection">About</h2>
             <div class="colorful__text">
               <p>
-                Frontend Union is an organization, that brings together several communities to create unique conference. We focus on two things, sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_
+                Frontend Union is an organization, that brings together several communities to create unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_
               </p>
             </div>
           </div>
@@ -90,10 +89,10 @@
               <span class="stay-tuned__heading">
                 Stay tuned bro
               </span>
-              <a class="stay-tuned__link stay-tuned__link--fb" href="#">
+              <a class="stay-tuned__link stay-tuned__link--fb" href="https://www.facebook.com/frontendunion/" target="_blank">
                 <span class="stay-tuned__text">Facebook</span>
               </a>
-              <a class="stay-tuned__link stay-tuned__link--tw" href="#">
+              <a class="stay-tuned__link stay-tuned__link--tw" href="https://twitter.com/frontend_union" target="_blank">
                 <span class="stay-tuned__text">Twitter</span>
               </a>
             </div>
@@ -105,150 +104,274 @@
     <section class="talks" data-sticky-action>
       <div class="talks__inner" id="speakersSection">
 
-        <div class="talks__item">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              Living Style guides are a new frontend development trend. The next logical step is to develop the components to turn them into sandboxes for new interfaces. By adopting such workflow, the developers will be able to stop “developing the pages” and move to developing independent components that constitute pages. Development effort will get a considerable speed and quality boost. This talk is based on the experience of two Finnish companies – SC5 Online и Elisa – that promote this philosophy with their own open source tools.
-            </div>
-          </article>
-        </div>
+        <div class="talks__column">
 
-        <div class="talks__item talks__item--colored">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              You probably had a chance to work on asynchronous code. It takes a lot of time to read, understand, debug it.  There are hundreds of articles and tutorials offering insights into making asynchronous programming easier: promises, generators, co, thunkify, babel,... How can one grasp it all? I will be talking about the evolution of asynchronous programming in simple words, offering examples and drawings. Which libraries are fit for which situations – according to my experience? I will try to make your asynchronous code simpler! :)
-            </div>
-          </article>
-        </div>
+          <div class="talks__item">
+            <article class="talk">
+              <div class="talk__speaker">
+                <img class="talk__speaker-photo" src="assets/images/content/Barak.png" width="" height="" alt="Barak Chamo" />
+                <div class="talk__speaker-title">
+                  <h2 class="talk__speaker-name">
+                    <span>Barak Chamo</span>
+                  </h2>
+                  <div class="talk__speaker-about">
+                    <a href="https://twitter.com/GoFoolhardy" target="_blank">@GoFoolhardy</a>, <a href="https://github.com/barakchamo" target="_blank">_barakchamo</a>
+                  </div>
+                </div>
+              </div>
+              <div class="talk__description">
+                "Generative Art with CSS"
+                <br>
+                London, UK
+              </div>
+            </article>
+          </div>
 
-        <div class="talks__item talks__item--colored">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              React is a powerful tool for creating dynamic web-apps. While isomorphic projects grow in popularity, testing them still summons a soft quake in the minds of developers. What tools to use and how to use them? What to be afraid of? Where to look for answers?
-            </div>
-          </article>
+          <div class="talks__item">
+            <article class="talk">
+              <div class="talk__speaker">
+                <img class="talk__speaker-photo" src="assets/images/content/Priniciya.jpg" width="" height="" alt="Princiya Marina" />
+                <div class="talk__speaker-title">
+                  <h2 class="talk__speaker-name">
+                    <span>Princiya Marina</span>
+                  </h2>
+                  <div class="talk__speaker-about">
+                    <a href="https://twitter.com/princi_ya" target="_blank">@princi_ya</a>
+                  </div>
+                </div>
+              </div>
+              <div class="talk__description">
+                "Natural User Interfaces"
+                <br>
+                Berlin, Germany
+              </div>
+            </article>
+          </div>
         </div>
+        <div class="talks__column">
+          <div class="talks__item">
+            <article class="talk">
+              <div class="talk__speaker">
+                <img class="talk__speaker-photo" src="assets/images/content/Martin.jpg" width="" height="" alt="Martin Splitt" />
+                <div class="talk__speaker-title">
+                  <h2 class="talk__speaker-name">
+                    <span>Martin Splitt</span>
+                  </h2>
+                  <div class="talk__speaker-about">
+                    <a href="https://twitter.com/g33konaut" target="_blank">@g33konaut</a>, <a href="https://github.com/AVGP">_AVGP</a>
+                  </div>
+                </div>
+              </div>
+              <div class="talk__description">
+                "Building interactive 3D worlds in the browser with WebGL"
+                <br>
+                Zürich, Switzerland
+              </div>
+            </article>
+          </div>
 
-        <div class="talks__item">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              Data synchronization algorithms have been around for a quite a while. The first papers on this topic have been published in 1989 and the algorithm (Operational Transformation) that is derived from this paper is the de-facto standard for many collaborative applications.
-In 2009, a new algorithm (Differential Synchronization) has been introduced that simplifies and enhances synchronization. In this talk I will explain this algorithm and show how it can be used in your web applications. I wrote a node module that allows you to easily add collaborative features to your web app using this new technique.
-            </div>
-          </article>
+          <div class="talks__item">
+            <article class="talk">
+              <div class="talk__speaker">
+                <img class="talk__speaker-photo" src="assets/images/content/Fabian.jpeg" width="" height="" alt="Fabian" />
+                <div class="talk__speaker-title">
+                  <h2 class="talk__speaker-name">
+                    <span>Fabian</span>
+                  </h2>
+                  <div class="talk__speaker-about">
+                    <a href="https://twitter.com/filtercake" target="_blank">@filtercake</a>, <a href="https://github.com/filtercake">_filtercake</a>
+                  </div>
+                </div>
+              </div>
+              <div class="talk__description">
+                "UX from Scratch"
+                <br>
+                Hamburg, Germany
+              </div>
+            </article>
+          </div>
+          
+          
         </div>
-
-        <div class="talks__item talks__item--colored">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              jQuery, thank you for providing cross-browser compatibility and convenient plugins, but it is time to move on and write in “real” JS.
-My talk is dedicated to gradually abandoning jQuery in favor of pure JS.
-            </div>
-          </article>
-        </div>
-
-        <div class="talks__item">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              Nowadays lots of users store their private data in the Internet. Users have developed the habit of syncing all their photos, contacts or even credit card stuff via clouds. We, the web developers, have to give them confidence in their data’s protection and make sure it will never be stolen by a bunch of people in masks. I'll reveal the secrets of XSS attacks and the methods of defense against them. I'll also introduce a couple of examples to improve your awareness: how easy it is to execute an XSS attack; and how you can protect the privacy of your users by employing different tools such as CSP, X-Frame-Options, X-XSS-Protection and others. It will be a lot of fun.
-            </div>
-          </article>
-        </div>
-
-        <div class="talks__item talks__item--colored">
-          <article class="talk">
-            <img class="talk__photo" src="assets/images/content/speaker.jpg" width="244" height="144" alt="Varvara Stepanova" />
-            <h2 class="talk__title">Styleguide First, new approach to UI component development.</h2>
-            <div class="talk__speaker">
-              Varvara Stepanova
-            </div>
-            <div class="talk__speaker-about">
-              @toivonens, HelsinkiJS
-            </div>
-            <div class="talk__description">
-              If you ever took an interest in testing, you probably know how to test a TODO app (no less than one in every three testing-related articles tells about that) or remember Wikipedia definitions of TDD and Unit Testing by heart. So I will not be speaking about that. I will offer you three stories from project's life and how testing is involved with it. These stories teach how to start writing tests, how to maintain them — and how to preserve your faith.
-            </div>
-          </article>
-        </div>
-
       </div>
     </section>
+
+<!--     <section class="contacts">
+      <div class="contacts__map"></div>
+      <div class="contacts__inner">
+        <div class="contacts__item">
+          10312, Antakalnio g. 17,<br>
+          Vilnius
+        </div>
+        <div class="contacts__item">
+          If there’s anything you’d like to ask us <a href="mailto:info@frontendunion.com">info@frontendunion.com</a>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="colorful colorful--background" id="organisersSection">
+      <div class="colorful__inner">
+        <div class="colorful__container">
+          <div class="colorful__content">
+            <h2 class="colorful__title">Organisers</h2>
+            <div class="colorful__text">
+              <p>
+                Andrey Salomatin <a href="https://twitter.com/filipovskii">@filipovskii</a>,Egor Miasnikov <a href="https://twitter.com/j0gurt">@j0gurt</a>, Marina Miranovich <a href="https://twitter.com/obnoxious_mari">@obnoxious_mari</a>, Oksana Kolesa, Diana Aladina, Tanya Denisuyk <a href="https://twitter.com/deni_deniskina">@deni_deniskina</a>
+              </p>
+            </div>
+          </div>
+          <!-- <div class="colorful__content">
+            <h2 class="colorful__title">Special thanks</h2>
+            <div class="colorful__text">
+              <p>
+                Denis Iogansen, Dmitry Pryshchepa, Elena Ivanova, Ilya Vakhrushev, Roman Komarov, Ruslan Kaymakov, <a href="#">Sasha Ermolenko</a>, Sergey Davydovsky, <a href="#">Vasilika Klimova</a>, <a href="#">Web Standards</a>, <a href="#">Yelena Jetpyspayeva</a>, <a href="#">Zakhar Day</a>
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="sponsors">
+      <div class="sponsors__inner">
+        <ul class="sponsors__list sponsors__list--large">
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+        </ul>
+
+        <ul class="sponsors__list sponsors__list--medium">
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+        </ul>
+
+        <ul class="sponsors__list sponsors__list--small">
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+          <li class="sponsors__item">
+            <a class="sponsors__link" href="#">
+              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section> -->
 
   </main>
 
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__item">
+        <ul class="secondary-nav">
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#aboutSection">About</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#speakersSection">Speakers</a>
+          </li>
+          <!-- <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Programme</a>
+          </li> -->
+
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#organisersSection">Contacts</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#organisersSection">Organizers</a>
+          </li>
+          <!-- <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">Sponsors</a>
+          </li> -->
+
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="https://ti.to/frontend-union/2016/" target="_blank">Tickets</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="http://confcodeofconduct.com/" target="_blank">Code of conduct</a>
+          </li>
+          <!-- <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="#">FUNC 2015</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="footer__item">
         <div class="branding">
           <a class="branding__link" href="https://www.facebook.com/headexchangeteam/" target="_blank">
-            <img class="branding__logo" src="assets/images/hex.svg" width="136" height="21" alt="Hæd Exchange" />
+            <img class="branding__logo" src="assets/images/hex.svg" width="232" height="36" alt="Hæd Exchange" />
           </a>
           <div class="branding__slogan">
-            Branding, Design, Coding
+            Branding, Design
           </div>
         </div>
-      </div>
-      <div class="footer__item">
-        Code of Conduct
-      </div>
-      <div class="footer__item">
-        <div class="footer__colored">
-          Idea by Andrey Salomatin
-        </div>
-        2015 August
       </div>
     </div>
   </footer>
 
-  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/bundle.js"></script>
 </body>
 
 </html>

@@ -6,9 +6,17 @@
 
 .colorful {
   padding-top: 3.2rem;
-  padding-bottom: 16.3rem;
+  padding-bottom: 9rem;
   background: var(--colorDark);
   color: var(--colorOpposite);
+
+  &--background {
+    background: url('../images/skew.svg') no-repeat;
+    background-size: 100% 100%;
+    padding-top: 27rem;
+    padding-bottom: 19rem;
+    margin-top: -2rem;
+  }
 }
 
 .colorful__inner {
@@ -21,6 +29,11 @@
   font-family: var(--fontFamilyMono);
   line-height: 1.6;
   padding-right: 36%;
+  margin-top: 3rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .colorful__title {
@@ -50,6 +63,15 @@
     margin-top: 1rem;
     margin-bottom: 0.4rem;
     padding-left: var(--paddingLeftContent);
+  }
+
+  & a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: #acacac;
+    }
   }
 }
 
