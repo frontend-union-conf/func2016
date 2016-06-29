@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -26,10 +26,10 @@
       <nav class="header__navigation">
         <ul class="topnav">
           <li class="topnav__item">
-            <a class="topnav__link" href="#aboutSection">About</a>
+            <a class="topnav__link" data-scroll href="#aboutSection">About</a>
           </li>
           <li class="topnav__item">
-            <a class="topnav__link" href="#speakersSection">Speakers</a>
+            <a class="topnav__link" data-scroll href="#speakersSection">Speakers</a>
           </li>
           <!-- <li class="topnav__item">
             <a class="topnav__link" href="#">Programme</a>
@@ -51,17 +51,11 @@
       <div class="intro__inner">
         <div class="intro__content">
           <h1 class="intro__title">
-            Frontend Union
-            <br>
-            Conference
-            <br>
-            Vilnius
+            Frontend Union Conference Vilnius
           </h1>
           <div class="infobox">
             <div class="infobox__item">
-              Menų
-              <br>
-              spaustuvė
+              Menų spaustuvė
             </div>
             <div class="infobox__item">
               27/08/2016
@@ -73,11 +67,11 @@
       </div>
     </section>
 
-    <section class="colorful">
+    <section id="aboutSection" class="colorful">
       <div class="colorful__inner">
         <div class="colorful__container">
           <div class="colorful__content">
-            <h2 class="colorful__title" id="aboutSection">About</h2>
+            <h2 class="colorful__title">About</h2>
             <div class="colorful__text">
               <p>
                 Frontend Union is an organization, that brings together several communities to create unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_
@@ -101,8 +95,8 @@
       </div>
     </section>
 
-    <section class="talks" data-sticky-action>
-      <div class="talks__inner" id="speakersSection">
+    <section id="speakersSection" class="talks" data-sticky-action>
+      <div class="talks__inner">
 
         <div class="talks__column">
 
@@ -112,7 +106,8 @@
                 <img class="talk__speaker-photo" src="assets/images/content/Barak.png" width="" height="" alt="Barak Chamo" />
                 <div class="talk__speaker-title">
                   <h2 class="talk__speaker-name">
-                    <span>Barak Chamo</span>
+                    <span>Barak</span>
+                    <span>Chamo</span>
                   </h2>
                   <div class="talk__speaker-about">
                     <a href="https://twitter.com/GoFoolhardy" target="_blank">@GoFoolhardy</a>, <a href="https://github.com/barakchamo" target="_blank">_barakchamo</a>
@@ -133,7 +128,8 @@
                 <img class="talk__speaker-photo" src="assets/images/content/Priniciya.jpg" width="" height="" alt="Princiya Marina" />
                 <div class="talk__speaker-title">
                   <h2 class="talk__speaker-name">
-                    <span>Princiya Marina</span>
+                    <span>Princiya</span>
+                    <span>Marina</span>
                   </h2>
                   <div class="talk__speaker-about">
                     <a href="https://twitter.com/princi_ya" target="_blank">@princi_ya</a>
@@ -155,7 +151,8 @@
                 <img class="talk__speaker-photo" src="assets/images/content/Martin.jpg" width="" height="" alt="Martin Splitt" />
                 <div class="talk__speaker-title">
                   <h2 class="talk__speaker-name">
-                    <span>Martin Splitt</span>
+                    <span>Martin</span>
+                    <span>Splitt</span>
                   </h2>
                   <div class="talk__speaker-about">
                     <a href="https://twitter.com/g33konaut" target="_blank">@g33konaut</a>, <a href="https://github.com/AVGP">_AVGP</a>
@@ -190,8 +187,8 @@
               </div>
             </article>
           </div>
-          
-          
+
+
         </div>
       </div>
     </section>
@@ -209,7 +206,7 @@
       </div>
     </section> -->
 
-    <section class="colorful colorful--background" id="organisersSection">
+    <section id="organisersSection" class="colorful colorful--background">
       <div class="colorful__inner">
         <div class="colorful__container">
           <div class="colorful__content">
@@ -328,34 +325,23 @@
       <div class="footer__item">
         <ul class="secondary-nav">
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#aboutSection">About</a>
+            <a class="secondary-nav__link" data-scroll href="#aboutSection">About</a>
           </li>
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#speakersSection">Speakers</a>
-          </li>
-          <!-- <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">Programme</a>
-          </li> -->
-
-          <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#organisersSection">Contacts</a>
+            <a class="secondary-nav__link" data-scroll href="#speakersSection">Speakers</a>
           </li>
           <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#organisersSection">Organizers</a>
+            <a class="secondary-nav__link" data-scroll href="#organisersSection">Contacts</a>
           </li>
-          <!-- <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">Sponsors</a>
-          </li> -->
-
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" data-scroll href="#organisersSection">Organizers</a>
+          </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="https://ti.to/frontend-union/2016/" target="_blank">Tickets</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="http://confcodeofconduct.com/" target="_blank">Code of conduct</a>
           </li>
-          <!-- <li class="secondary-nav__item">
-            <a class="secondary-nav__link" href="#">FUNC 2015</a>
-          </li> -->
         </ul>
       </div>
       <div class="footer__item">

@@ -9,7 +9,6 @@
   padding-top: 2.4rem;
   padding-bottom: 2.3rem;
   margin-top: 3rem;
-  margin-right: 1.8rem;
 
   @mixin fontSpacing;
   font-size: 1.2rem;
@@ -24,13 +23,15 @@
   & a {
     color: currentColor;
     text-decoration: none;
+
     &:hover {
+      color: #acacac;
       text-decoration: underline;
     }
   }
 
   &:first-child {
     border-left: 0;
-    width: 40%;
+    flex-basis: 50%;
   }
 }

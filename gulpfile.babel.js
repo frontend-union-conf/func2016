@@ -31,7 +31,7 @@ const fontsPath = {
 
 const svgPath = {
   src: `assets/svg/**/*.svg`,
-  folder: `build/assets/svg/`
+  folder: `assets/svg/`
 };
 
 const scriptsPath = {

@@ -19,7 +19,7 @@
 
   &::after {
     content: '';
-    display: inline-block;
+    display: block;
     background: #000;
     width: 3rem;
     height: 4px;
@@ -35,15 +35,22 @@
   margin: 0;
 
   & span {
-    display: table-caption;
+    float: left;
+    clear: left;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 0.3rem;
+    padding: 0 0.5rem;
   }
 }
 
 .talk__speaker-about {
+  display: inline-block;
   font-size: 1.5rem;
   line-height: 1.13;
   letter-spacing: 0.04em;
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 0.5rem;
   & a {
     color: currentColor;
     text-decoration: none;

@@ -1,4 +1,5 @@
 import SimpleMasonry from 'simple-masonry';
+import smoothScroll from 'smooth-scroll';
 
 'use strict';
 
@@ -8,6 +9,9 @@ let simpleM = new SimpleMasonry({
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {
+  smoothScroll.init({
+    updateURL: false
+  });
   simpleM.init();
 });
 

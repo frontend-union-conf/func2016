@@ -4,7 +4,8 @@
   "description": "Frontend Union is an organization, that brings together several communities to create unique conference.",
   "main": "index.html",
   "dependencies": {
-    "simple-masonry": "^1.0.6"
+    "simple-masonry": "^1.0.6",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
