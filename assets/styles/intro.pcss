@@ -15,6 +15,56 @@
   min-height: 81rem;
   margin-top: -4rem;
   padding-top: 9.6rem;
+  position: relative;
+
+  background-image:
+    url('../images/plus.png'),
+    url('../images/v.png'),
+    url('../images/III.png'),
+    url('../images/equal.png'),
+    url('../images/III.png');
+  background-position:
+    75% 19%,
+    72% 65%,
+    24% 31%,
+    6% 66%,
+    50% 92%;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  &::before {
+    content: '';
+    display: block;
+    background-image: url('../images/bracket.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18rem;
+    height: 36.8rem;
+    transform: rotate(180deg);
+
+    position: absolute;
+    top: 15rem;
+    left: 6.4rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background-image: url('../images/bracket.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18rem;
+    height: 36.8rem;
+
+    position: absolute;
+    top: 29.6rem;
+    right: 6rem;
+  }
+
 }
 
 .intro__content {

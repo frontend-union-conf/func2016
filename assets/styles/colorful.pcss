@@ -5,31 +5,94 @@
 }
 
 .colorful {
-  padding-top: 3.2rem;
-  padding-bottom: 9rem;
   background: var(--colorDark);
   color: var(--colorOpposite);
+
+  &--about {
+    background-image:
+      url('../images/equal.png'),
+      url('../images/v90.png');
+    background-position:
+      86% 81%,
+      10% 75%;
+    background-repeat:
+      no-repeat,
+      no-repeat;
+  }
 
   &--background {
     background: svg-load('skew.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding-top: 27rem;
-    padding-bottom: 21rem;
     margin-top: -2rem;
+
+    & .colorful__inner {
+      padding-top: 20rem;
+      padding-bottom: 16rem;
+      position: relative;
+      overflow: hidden;
+
+      background-image:
+        url('../images/v.png'),
+        url('../images/III.png'),
+        url('../images/equal.png');
+      background-position:
+        85% 58%,
+        44% 28%,
+        9% 66%;
+      background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat;
+
+      &::before {
+        content: '';
+        display: block;
+        background-image: url('../images/bracket.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18rem;
+        height: 36.8rem;
+        transform: rotate(180deg);
+
+        position: absolute;
+        bottom: -22.4rem;
+        left: 6.4rem;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background-image: url('../images/bracket.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 18rem;
+        height: 36.8rem;
+
+        position: absolute;
+        top: -14rem;
+        right: 6.2rem;
+      }
+    }
+
+    & .colorful__content {
+      padding-right: 20%;
+    }
   }
 }
 
 .colorful__inner {
   @mixin containerMain;
-  padding-left: 22.2rem;
+  padding-top: 3.2rem;
+  padding-bottom: 9rem;
 }
 
 .colorful__content {
   font-size: 1.8rem;
   font-family: var(--fontFamilyMono);
   line-height: 1.6;
-  padding-right: 36%;
+  padding-left: 20%;
+  padding-right: 30%;
   margin-top: 3rem;
 
   &:first-child {
