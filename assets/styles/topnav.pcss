@@ -1,0 +1,41 @@
+@import "mixin";
+
+.topnav {
+  list-style: none;
+  display: flex;
+  color: inherit;
+  margin: 0;
+}
+
+.topnav__item {
+  margin-left: 1rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.topnav__link {
+  @mixin headerFont;
+  color: inherit;
+
+  padding: 0.8rem 1.2rem 0.7rem;
+
+  &:hover,
+  &:focus {
+    color: #acacac;
+  }
+
+  &--outline {
+    border: 0.3rem solid var(--colorBrand);
+    margin-left: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    &:hover,
+    &:focus {
+      color: var(--colorOpposite);
+      background: var(--colorBrand);
+    }
+  }
+}

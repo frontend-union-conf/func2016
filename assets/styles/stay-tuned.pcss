@@ -1,0 +1,47 @@
+.stay-tuned {
+  font-size: 1.2rem;
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.stay-tuned__heading {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.stay-tuned__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  color: inherit;
+  text-decoration: none;
+  height: 4.2rem;
+  width: 4.2rem;
+  border: 2px solid var(--colorBrand);
+  border-radius: 50%;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+
+  &--tw {
+    background-image: svg-load("twitter.svg");
+  }
+
+  &--fb {
+    background-image: svg-load("facebook.svg");
+  }
+
+  &:hover,
+  &:focus {
+    border-color: currentColor;
+  }
+
+}
+
+.stay-tuned__text {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}

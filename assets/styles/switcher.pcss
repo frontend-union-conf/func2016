@@ -1,0 +1,33 @@
+@import "mixin";
+
+.switcher {
+  margin-left: 3rem;
+  color: inherit;
+}
+
+.switcher__link {
+  @mixin headerFont;
+  color: inherit;
+  padding: 0.4rem;
+
+  &:hover,
+  &:focus {
+    color: #acacac;
+  }
+
+  &--active {
+    color: #acacac;
+
+    cursor: default;
+    pointer-events: none;
+
+    &:hover,
+    &:focus {
+      color: #acacac;
+    }
+  }
+}
+
+.switcher__separator {
+  color: #acacac;
+}

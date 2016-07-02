@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
 import del from 'del';
+import babelify from 'babelify';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -24,12 +25,13 @@ const imagesPath = {
 
 const fontsPath = {
   src: `assets/fonts/**/*.{woff,woff2}`,
+  style: `assets/fonts/*.css`,
   dest: `build/assets/fonts/`
 };
 
 const svgPath = {
   src: `assets/svg/**/*.svg`,
-  folder: `build/assets/svg/`
+  folder: `assets/svg/`
 };
 
 const scriptsPath = {
@@ -51,6 +53,8 @@ gulp.task('styles', () => {
   return gulp.src(stylePath.src)
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
+      require('postcss-partial-import')({ extension: 'pcss' }),
+      require('postcss-mixins'),
       require('postcss-normalize'), // latest normalize.css
       require('postcss-normalize-charset'), // @charset "utf-8"
       require('postcss-cssnext')(), // http://cssnext.io/features/
@@ -95,11 +99,11 @@ gulp.task('html', () => {
 });
 
 gulp.task('scripts', () => {
-  return gulp.src(scriptsPath.src)
-    .pipe(development($.sourcemaps.init()))
-    //.pipe($.concat('bundle.js'))
-    .pipe($.babel())
-    .pipe(development($.sourcemaps.write('.')))
+  return gulp.src('./assets/scripts/bundle.js')
+    .pipe($.browserify({
+      transform: ['babelify'],
+      debug: development()
+    }))
     .pipe(production($.uglify()))
     .pipe(development(gulp.dest(scriptsPath.tmp)))
     .pipe(production(gulp.dest(scriptsPath.dest)))
@@ -109,6 +113,12 @@ gulp.task('scripts', () => {
 gulp.task("copy", () => {
   gulp.src(fontsPath.src).pipe(gulp.dest(fontsPath.dest));
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
+});
+
+gulp.task('fonts', () => {
+  return gulp.src(fontsPath.style)
+    .pipe($.csso())
+    .pipe(gulp.dest(fontsPath.dest));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
@@ -123,6 +133,7 @@ gulp.task('serve', ['styles', 'scripts'], () => {
 
   gulp.watch(stylePath.src, ['styles-linter', 'styles']);
   gulp.watch(svgPath.src, ['styles']);
+  gulp.watch(scriptsPath.src, ['scripts']);
   gulp.watch("*.html").on('change', reload);
 });
 
@@ -130,7 +141,7 @@ gulp.task('set-production', function() {
   return $.environments.current(production);
 });
 
-gulp.task('prod', ['styles', 'scripts', 'html', 'images', 'copy'], () => {
+gulp.task('prod', ['styles', 'fonts', 'scripts', 'html', 'images', 'copy'], () => {
   return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

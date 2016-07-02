@@ -1,0 +1,32 @@
+@define-mixin headerFont {
+  font-family: var(--fontFamily);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@define-mixin containerMain {
+  max-width: var(--maxInnerWidth);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@define-mixin fontSpacing {
+  font-family: var(--fontFamily);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@keyframes smooth-entry {
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

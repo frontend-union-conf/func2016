@@ -1,9 +1,18 @@
 :root {
-  --fontFamily: Helvetica, Arial, sans-serif;
-  --fontSize: 1.4rem;
+  --fontFamily: 'PT Sans', Helvetica, Arial, sans-serif;
+  --fontFamilyCirce: 'Circe', Helvetica, Arial, sans-serif;
+  --fontFamilyMono: 'PT Mono', 'Courier New', Courier, monospace;
+  --fontSize: 1.8rem;
   --lineHeight: 1.5;
+
   --color: black;
-  --minWidth: 320px;
+  --colorBrand: #1f1fd5;
+  --colorOpposite: white;
+  --colorDark: #111;
+
+  /*--minWidth: 320px;*/
+  --minWidth: 1024px;
+  --maxInnerWidth: 1024px;
 }
 
 html {
@@ -15,7 +24,9 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-*, :before, :after {
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 
@@ -24,7 +35,7 @@ body {
 
   color: var(--color);
 
-  font-family: var(--fontFamily);
+  font-family: var(--fontFamilyCirce);
   font-size: var(--fontSize);
   font-weight: 400;
   line-height: var(--lineHeight);

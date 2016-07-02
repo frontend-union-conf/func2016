@@ -1,0 +1,37 @@
+@import "mixin";
+
+.infobox {
+  border: 2px solid currentColor;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 2.4rem;
+  padding-bottom: 2.3rem;
+  margin-top: 3rem;
+
+  @mixin fontSpacing;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.infobox__item {
+  border-left: 2px solid currentColor;
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+
+  & a {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover {
+      color: #acacac;
+      text-decoration: underline;
+    }
+  }
+
+  &:first-child {
+    border-left: 0;
+    flex-basis: 50%;
+  }
+}
