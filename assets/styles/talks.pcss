@@ -3,9 +3,7 @@
 .talks {
   background: var(--colorBrand);
   color: var(--colorOpposite);
-  padding-top: 13.7rem;
   position: relative;
-  overflow: hidden;
 
   &::after {
     content: '';
@@ -15,12 +13,39 @@
     background-size: 100% 100%;
     width: 100%;
     height: 29.3rem;
-    margin-top: 4rem;
+    position: absolute;
+    bottom: 0;
   }
 }
 
 .talks__inner {
   @mixin containerMain;
+  padding-top: 13.7rem;
+  padding-bottom: 33rem;
+
+  background-image:
+    url('../images/III.png'),
+    url('../images/v90.png'),
+    url('../images/III.png'),
+    url('../images/equal.png'),
+    url('../images/v90.png'),
+    url('../images/equal.png')
+    ;
+  background-position:
+    50% 5%,
+    4% 30%,
+    4% 60%,
+    96% 40%,
+    96% 70%,
+    20% 88%
+    ;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
 }
 
 .talks__table {
@@ -55,7 +80,7 @@
 
 .talks__row {
   & .talks__cell {
-    border-top: 2px dashed #5555df;
+    border-top: 1px dashed #5555df;
   }
 }
 
