@@ -61,7 +61,8 @@ gulp.task('styles', () => {
       require('postcss-inline-svg')({ // inline SVG
         path: svgPath.folder
       }),
-      require('postcss-svgo') // optimise inline SVG
+      require('postcss-svgo'), // optimise inline SVG
+      require('postcss-assets')
     ])).on('error', log)
     .pipe(production($.csso()))
     .pipe(development(gulp.dest(stylePath.tmp)))
@@ -94,7 +95,10 @@ gulp.task('images', () => {
 
 gulp.task('html', () => {
   return gulp.src('*.html')
-    .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe($.htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest('build'));
 });
 
@@ -113,6 +117,7 @@ gulp.task('scripts', () => {
 gulp.task("copy", () => {
   gulp.src(fontsPath.src).pipe(gulp.dest(fontsPath.dest));
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
+  gulp.src('favicon.ico').pipe(gulp.dest('build/'));
 });
 
 gulp.task('fonts', () => {

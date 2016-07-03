@@ -4,8 +4,8 @@ import smoothScroll from 'smooth-scroll';
 'use strict';
 
 let simpleM = new SimpleMasonry({
-  masonryBox: '.talks__inner',
-  masonryColumn: '.talks__column'
+  masonryBox: '.speakers__columns',
+  masonryColumn: '.speakers__column'
 });
 
 document.addEventListener("DOMContentLoaded", function(event) {

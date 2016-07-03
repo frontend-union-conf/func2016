@@ -1,17 +1,24 @@
 @import "mixin";
 
-.talks {
-  padding-top: 10rem;
-  padding-bottom: 2rem;
+.speakers {
   background: svg-load('skew-gray.svg') no-repeat 0 center;
   background-size: 100% 50%;
+}
+
+.speakers__inner {
+  @mixin containerMain;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  padding-left: 9rem;
+  padding-right: 12.6rem;
+
   position: relative;
 
   &::before {
     content: '';
     z-index: -1;
     display: block;
-    background-image: url('../images/bracket-gray.png');
+    background-image: svg-load('bracket-gray.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width: 18rem;
@@ -19,7 +26,7 @@
     transform: rotate(180deg);
 
     position: absolute;
-    bottom: -22.4rem;
+    top: 10%;
     left: 6.4rem;
   }
 
@@ -27,23 +34,20 @@
     content: '';
     z-index: -1;
     display: block;
-    background-image: url('../images/bracket-gray.png');
+    background-image: svg-load('bracket-gray.svg');
     background-repeat: no-repeat;
     background-size: contain;
     width: 18rem;
     height: 36.8rem;
 
     position: absolute;
-    top: -14rem;
+    bottom: 12%;
     right: 6.2rem;
   }
+
 }
 
-.talks__inner {
-  @mixin containerMain;
-  padding-left: 9rem;
-  padding-right: 12.6rem;
-
+.speakers__columns {
   &::after {
     content: '';
     display: table;
@@ -51,14 +55,14 @@
   }
 }
 
-.talks__column {
+.speakers__column {
   width: 50%;
 
   &:first-child {
-    & .talks__item {
+    & .speakers__item {
       &:nth-child(even) {
         width: 31rem;
-        & .talk__speaker-photo {
+        & .speaker__photo {
           width: 21.9rem;
           height: 30rem;
         }
@@ -68,12 +72,12 @@
 
   &:last-child {
 
-    & .talks__item {
+    & .speakers__item {
       margin-top: 40px;
       &:nth-child(odd) {
         width: 31rem;
         margin-left: auto;
-        & .talk__speaker-photo {
+        & .speaker__photo {
           width: 21.9rem;
           height: 30rem;
         }
@@ -82,7 +86,7 @@
   }
 }
 
-.talks__item {
+.speakers__item {
   margin-bottom: 8rem;
   margin-left: 3.6rem;
 }
