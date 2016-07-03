@@ -25,7 +25,7 @@ const imagesPath = {
 
 const fontsPath = {
   src: `assets/fonts/**/*.{woff,woff2}`,
-  style: `assets/fonts/*.css`,
+  style: `assets/fonts/*.pcss`,
   dest: `build/assets/fonts/`
 };
 
@@ -50,7 +50,7 @@ function log() {
 };
 
 gulp.task('styles', () => {
-  return gulp.src(stylePath.src)
+  return gulp.src([fontsPath.style, stylePath.src])
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
       require('postcss-partial-import')({ extension: 'pcss' }),
@@ -117,13 +117,8 @@ gulp.task('scripts', () => {
 gulp.task("copy", () => {
   gulp.src(fontsPath.src).pipe(gulp.dest(fontsPath.dest));
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
+  gulp.src('assets/scripts/picturefill.js').pipe(gulp.dest(scriptsPath.dest));
   gulp.src('favicon.ico').pipe(gulp.dest('build/'));
-});
-
-gulp.task('fonts', () => {
-  return gulp.src(fontsPath.style)
-    .pipe($.csso())
-    .pipe(gulp.dest(fontsPath.dest));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
@@ -146,7 +141,7 @@ gulp.task('set-production', function() {
   return $.environments.current(production);
 });
 
-gulp.task('prod', ['styles', 'fonts', 'scripts', 'html', 'images', 'copy'], () => {
+gulp.task('prod', ['styles', 'scripts', 'html', 'images', 'copy'], () => {
   return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
