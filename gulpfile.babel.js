@@ -50,7 +50,7 @@ function log() {
 };
 
 gulp.task('styles', () => {
-  return gulp.src([fontsPath.style, stylePath.src])
+  return gulp.src([stylePath.src, fontsPath.style])
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
       require('postcss-partial-import')({ extension: 'pcss' }),
