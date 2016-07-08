@@ -1,88 +1,121 @@
 @import "mixin";
 
 .talks {
-  padding-top: 10rem;
-  padding-bottom: 2rem;
-  background: svg-load('skew-gray.svg') no-repeat 0 center;
-  background-size: 100% 50%;
+  background: var(--colorBrand);
+  color: var(--colorOpposite);
   position: relative;
-
-  &::before {
-    content: '';
-    z-index: -1;
-    display: block;
-    background-image: url('../images/bracket-gray.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 18rem;
-    height: 36.8rem;
-    transform: rotate(180deg);
-
-    position: absolute;
-    bottom: -22.4rem;
-    left: 6.4rem;
-  }
 
   &::after {
     content: '';
-    z-index: -1;
     display: block;
-    background-image: url('../images/bracket-gray.png');
+    background: svg-load('triangle.svg');
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 18rem;
-    height: 36.8rem;
-
+    background-size: 100% 100%;
+    width: 100%;
+    height: 29.3rem;
     position: absolute;
-    top: -14rem;
-    right: 6.2rem;
+    bottom: 0;
   }
 }
 
 .talks__inner {
   @mixin containerMain;
-  padding-left: 9rem;
-  padding-right: 12.6rem;
+  padding-top: 13.7rem;
+  padding-bottom: 33rem;
 
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
+  background-image:
+    url('../images/III.png'),
+    url('../images/v90.png'),
+    url('../images/III.png'),
+    url('../images/equal.png'),
+    url('../images/v90.png'),
+    url('../images/equal.png')
+    ;
+  background-position:
+    50% 5%,
+    4% 30%,
+    4% 60%,
+    96% 40%,
+    96% 70%,
+    20% 88%
+    ;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+}
+
+.talks__table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  font-size: 2.2rem;
+  padding: 0 12.6rem;
+}
+
+.talks__row,
+.talks__caption {
+  display: table-row;
+}
+
+.talks__caption {
+  background: black;
+  font-size: 1.8rem;
+
+  & .talks__cell {
+    vertical-align: middle;
+    padding-top: 1.5rem;
+    padding-bottom: 0.8rem;
+  }
+
+  & + .talks__row {
+    & .talks__cell {
+      border: 0;
+    }
   }
 }
 
-.talks__column {
-  width: 50%;
+.talks__row {
+  & .talks__cell {
+    border-top: 1px dashed #5555df;
+  }
+}
+
+.talks__cell {
+  display: table-cell;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   &:first-child {
-    & .talks__item {
-      &:nth-child(even) {
-        width: 31rem;
-        & .talk__speaker-photo {
-          width: 21.9rem;
-          height: 30rem;
-        }
-      }
-    }
-  }
-
-  &:last-child {
-
-    & .talks__item {
-      margin-top: 40px;
-      &:nth-child(odd) {
-        width: 31rem;
-        margin-left: auto;
-        & .talk__speaker-photo {
-          width: 21.9rem;
-          height: 30rem;
-        }
-      }
-    }
+    font-size: 1.6rem;
+    width: 22%;
   }
 }
 
-.talks__item {
-  margin-bottom: 8rem;
-  margin-left: 3.6rem;
+.talks__speaker {
+  font-family: var(--fontFamilyMono);
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.talks__speaker-contact {
+  font-size: 1.5rem;
+  color: #12127c;
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--colorOpposite);
+      text-decoration: underline;
+    }
+  }
 }

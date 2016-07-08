@@ -25,7 +25,7 @@ const imagesPath = {
 
 const fontsPath = {
   src: `assets/fonts/**/*.{woff,woff2}`,
-  style: `assets/fonts/*.css`,
+  style: `assets/fonts/*.pcss`,
   dest: `build/assets/fonts/`
 };
 
@@ -50,7 +50,7 @@ function log() {
 };
 
 gulp.task('styles', () => {
-  return gulp.src(stylePath.src)
+  return gulp.src([stylePath.src, fontsPath.style])
     .pipe($.concat('bundle.css'))
     .pipe($.postcss([
       require('postcss-partial-import')({ extension: 'pcss' }),
@@ -61,7 +61,8 @@ gulp.task('styles', () => {
       require('postcss-inline-svg')({ // inline SVG
         path: svgPath.folder
       }),
-      require('postcss-svgo') // optimise inline SVG
+      require('postcss-svgo'), // optimise inline SVG
+      require('postcss-assets')
     ])).on('error', log)
     .pipe(production($.csso()))
     .pipe(development(gulp.dest(stylePath.tmp)))
@@ -94,7 +95,10 @@ gulp.task('images', () => {
 
 gulp.task('html', () => {
   return gulp.src('*.html')
-    .pipe($.htmlmin({collapseWhitespace: true}))
+    .pipe($.htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest('build'));
 });
 
@@ -113,12 +117,8 @@ gulp.task('scripts', () => {
 gulp.task("copy", () => {
   gulp.src(fontsPath.src).pipe(gulp.dest(fontsPath.dest));
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
-});
-
-gulp.task('fonts', () => {
-  return gulp.src(fontsPath.style)
-    .pipe($.csso())
-    .pipe(gulp.dest(fontsPath.dest));
+  gulp.src('assets/scripts/picturefill.js').pipe(gulp.dest(scriptsPath.dest));
+  gulp.src('favicon.ico').pipe(gulp.dest('build/'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
@@ -141,7 +141,7 @@ gulp.task('set-production', function() {
   return $.environments.current(production);
 });
 
-gulp.task('prod', ['styles', 'fonts', 'scripts', 'html', 'images', 'copy'], () => {
+gulp.task('prod', ['styles', 'scripts', 'html', 'images', 'copy'], () => {
   return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

@@ -28,6 +28,7 @@
     "gulp-size": "^2.1.0",
     "gulp-stylelint": "^2.0.2",
     "gulp-uglify": "^1.5.4",
+    "postcss-assets": "^4.1.0",
     "postcss-cssnext": "^2.6.0",
     "postcss-custom-properties": "^5.0.1",
     "postcss-inline-svg": "^2.0.1",

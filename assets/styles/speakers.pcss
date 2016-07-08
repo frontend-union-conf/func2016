@@ -1,0 +1,92 @@
+@import "mixin";
+
+.speakers {
+  background: svg-load('skew-gray.svg') no-repeat 0 center;
+  background-size: 100% 50%;
+}
+
+.speakers__inner {
+  @mixin containerMain;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  padding-left: 9rem;
+  padding-right: 12.6rem;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    z-index: -1;
+    display: block;
+    background-image: svg-load('bracket-gray.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18rem;
+    height: 36.8rem;
+    transform: rotate(180deg);
+
+    position: absolute;
+    top: 10%;
+    left: 6.4rem;
+  }
+
+  &::after {
+    content: '';
+    z-index: -1;
+    display: block;
+    background-image: svg-load('bracket-gray.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18rem;
+    height: 36.8rem;
+
+    position: absolute;
+    bottom: 12%;
+    right: 6.2rem;
+  }
+
+}
+
+.speakers__columns {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.speakers__column {
+  width: 50%;
+
+  &:first-child {
+    & .speakers__item {
+      &:nth-child(even) {
+        width: 31rem;
+        & .speaker__photo {
+          width: 21.9rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
+
+  &:last-child {
+
+    & .speakers__item {
+      margin-top: 40px;
+      &:nth-child(odd) {
+        width: 31rem;
+        margin-left: auto;
+        & .speaker__photo {
+          width: 21.9rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
+}
+
+.speakers__item {
+  margin-bottom: 8rem;
+  margin-left: 3.6rem;
+}
