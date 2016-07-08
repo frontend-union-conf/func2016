@@ -3,8 +3,8 @@
 .intro {
   color: var(--colorOpposite);
   background-image: svg-load('skew.svg'), svg-load('rect.svg');
-  background-position: 0 0, 0 100%;
   background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 100%;
   background-size: 100% 100%, 100% 50%;
   margin-bottom: -1px;
 }
@@ -12,77 +12,98 @@
 .intro__inner {
   @mixin containerMain;
   position: relative;
-  min-height: 81rem;
-  margin-top: -4rem;
-  padding-top: 9.6rem;
-  position: relative;
+  padding-top: 8rem;
+  margin-top: -6rem;
 
   background-image:
     url('../images/plus.png'),
-    url('../images/v.png'),
-    url('../images/III.png'),
-    url('../images/equal.png'),
     url('../images/III.png');
   background-position:
-    75% 19%,
-    72% 65%,
-    24% 31%,
-    6% 66%,
+    86% 16%,
     50% 92%;
   background-repeat:
     no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat,
     no-repeat;
 
-  &::before {
-    content: '';
-    display: block;
-    background-image: svg-load('bracket.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 18rem;
-    height: 36.8rem;
-    transform: rotate(180deg);
+  @media (--desktop-viewport) {
+    min-height: 81rem;
 
-    position: absolute;
-    top: 13rem;
-    left: 6.4rem;
-  }
+    background-image:
+      url('../images/plus.png'),
+      url('../images/v.png'),
+      url('../images/III.png'),
+      url('../images/equal.png'),
+      url('../images/III.png');
+    background-position:
+      75% 19%,
+      72% 65%,
+      24% 31%,
+      6% 66%,
+      50% 92%;
+    background-repeat:
+      no-repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat;
 
-  &::after {
-    content: '';
-    display: block;
-    background-image: svg-load('bracket.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 18rem;
-    height: 36.8rem;
+    &::before {
+      content: '';
+      display: block;
+      background-image: svg-load('bracket.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 18rem;
+      height: 36.8rem;
+      transform: rotate(180deg);
 
-    position: absolute;
-    top: 31rem;
-    right: 6rem;
+      position: absolute;
+      top: 13rem;
+      left: 6.4rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      background-image: svg-load('bracket.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 18rem;
+      height: 36.8rem;
+
+      position: absolute;
+      top: 31rem;
+      right: 6rem;
+    }
   }
 
 }
 
 .intro__content {
-  background: url('../images/illustration.png') 3.7rem 0 no-repeat;
-  width: 34.6rem;
-  padding-top: 15.6rem;
+  background: url('../images/illustration-sm.png') 50% 0 no-repeat;
+  max-width: 34.6rem;
   margin-left: auto;
   margin-right: auto;
-  min-height: 44.2rem;
+  min-height: 50rem;
+  padding-top: 15.6rem;
+
+  @media (--desktop-viewport) {
+    background: url('../images/illustration.png') 3.7rem 0 no-repeat;
+    min-height: 44.2rem;
+  }
 }
 
 .intro__title {
-  font-size: 4rem;
   font-family: var(--fontFamilyMono);
+  font-size: 2.8rem;
   line-height: 1.2;
   position: relative;
   z-index: 1;
   margin: 0;
+
+  @media (--desktop-viewport) {
+    font-size: 4rem;
+  }
 }
 
 .intro__title-text {

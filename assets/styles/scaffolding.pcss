@@ -10,18 +10,24 @@
   --colorOpposite: white;
   --colorDark: #111;
 
-  /*--minWidth: 320px;*/
-  --minWidth: 1024px;
+  --minWidth: 320px;
   --maxInnerWidth: 1024px;
 }
+
+@custom-media --small-viewport (max-width: 699px);
+@custom-media --desktop-viewport (min-width: 700px);
 
 html {
   box-sizing: border-box;
 
-  font-size: 62.5%;
+  font-size: 53.6%;
 
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+
+  @media (width >= 700px) {
+    font-size: 62.5%;
+  }
 }
 
 *,

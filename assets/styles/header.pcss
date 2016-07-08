@@ -17,8 +17,7 @@
     width: 100%;
 
     & .header__inner {
-      padding-left: 0;
-      padding-top: 0;
+      padding: 0;
       align-items: center;
 
       &::after {
@@ -32,19 +31,31 @@
 
 .header__inner {
   @mixin containerMain;
+  padding: 2rem;
 
-  display: flex;
-  padding-right: 5.6rem;
-  padding-left: 6.5rem;
-  padding-top: 3.8rem;
+  @media (--desktop-viewport) {
+    display: flex;
+    padding-right: 5.6rem;
+    padding-left: 6.5rem;
+    padding-top: 3.8rem;
+  }
 }
 
 .header__logo {
   margin: 0;
   vertical-align: middle;
   margin-top: -0.4rem;
+
+  @media (--desktop-viewport) {
+    width: 16.5rem;
+    height: 7.4rem;
+  }
 }
 
 .header__navigation {
   margin-left: auto;
+
+  @media (--small-viewport) {
+    display: none;
+  }
 }

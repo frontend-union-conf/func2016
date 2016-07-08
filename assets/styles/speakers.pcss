@@ -56,7 +56,10 @@
 }
 
 .speakers__column {
-  width: 50%;
+
+  @media (width >= 700px) {
+    width: 50%;
+  }
 
   &:first-child {
     & .speakers__item {
