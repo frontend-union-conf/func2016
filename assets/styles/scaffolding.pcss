@@ -14,8 +14,10 @@
   --maxInnerWidth: 1024px;
 }
 
-@custom-media --small-viewport (max-width: 699px);
-@custom-media --desktop-viewport (min-width: 700px);
+@custom-media --before-desktop-viewport (max-width: 959px);
+@custom-media --desktop-viewport (min-width: 960px);
+@custom-media --before-medium-viewport (max-width: 699px);
+@custom-media --medium-viewport (min-width: 700px);
 
 html {
   box-sizing: border-box;
@@ -25,7 +27,7 @@ html {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
 
-  @media (width >= 700px) {
+  @media (--desktop-viewport) {
     font-size: 62.5%;
   }
 }

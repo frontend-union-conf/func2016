@@ -8,16 +8,17 @@
 .footer__inner {
   @mixin containerMain;
 
-  padding-left: 6.4rem;
-  padding-right: 6.4rem;
+  @media (--medium-viewport) {
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+    display: flex;
+    align-items: center;
 
-  display: flex;
-  align-items: center;
-
-  &::after {
-    display: block;
-    min-height: 20rem;
-    content: "";
+    &::after {
+      display: block;
+      min-height: 20rem;
+      content: "";
+    }
   }
 }
 
@@ -29,5 +30,11 @@
 
   &:nth-child(2) {
     margin-left: auto;
+  }
+
+  @media (--before-medium-viewport) {
+    &:nth-child(2) {
+      padding-top: 0;
+    }
   }
 }

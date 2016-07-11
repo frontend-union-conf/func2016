@@ -2,31 +2,38 @@
 
 .intro {
   color: var(--colorOpposite);
-  background-image: svg-load('skew.svg'), svg-load('rect.svg');
+  background-image: svg-load('skew-mobile.svg'), svg-load('rect.svg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 0 100%;
   background-size: 100% 100%, 100% 50%;
+  margin-top: 6rem;
   margin-bottom: -1px;
+
+  @media (--desktop-viewport) {
+    background-image: svg-load('skew.svg'), svg-load('rect.svg');
+    margin-top: 0;
+  }
 }
 
 .intro__inner {
   @mixin containerMain;
   position: relative;
-  padding-top: 8rem;
   margin-top: -6rem;
-
+  padding-bottom: 4rem;
   background-image:
     url('../images/plus.png'),
     url('../images/III.png');
   background-position:
-    86% 16%,
-    50% 92%;
+    90% 9%,
+    20% 81%;
   background-repeat:
     no-repeat,
     no-repeat;
 
   @media (--desktop-viewport) {
     min-height: 81rem;
+    padding-top: 8rem;
+    padding-bottom: 0;
 
     background-image:
       url('../images/plus.png'),

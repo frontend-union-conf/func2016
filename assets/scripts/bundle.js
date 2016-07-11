@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 let sticky = document.querySelector('[data-sticky]');
 let stickyHeight = sticky.offsetHeight;
-let stickyHeightNew = 74;
+let stickyHeightNew = 7;
 let stickyPoint = document.querySelector('[data-sticky-action]').offsetTop - stickyHeightNew;
 
 let main = document.querySelector('main');

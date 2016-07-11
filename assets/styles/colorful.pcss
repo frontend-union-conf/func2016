@@ -11,22 +11,29 @@
 
 .colorful__inner {
   @mixin containerMain;
-  padding-top: 3.2rem;
+  padding-top: 6rem;
   padding-bottom: 9rem;
-  background-image:
-    url('../images/equal.png'),
-    url('../images/v90.png');
-  background-position:
-    86% 81%,
-    10% 55%;
-  background-repeat:
-    no-repeat,
-    no-repeat;
+
+  @media (--desktop-viewport) {
+    padding-top: 3.2rem;
+    padding-bottom: 9rem;
+    background-image:
+      url('../images/equal.png'),
+      url('../images/v90.png');
+    background-position:
+      86% 81%,
+      10% 55%;
+    background-repeat:
+      no-repeat,
+      no-repeat;
+  }
 }
 
 .colorful__container {
-  padding-left: 20%;
-  padding-right: 30%;
+  @media (--desktop-viewport) {
+    padding-left: 20%;
+    padding-right: 30%;
+  }
 }
 
 .colorful__content {
@@ -81,5 +88,8 @@
 
 .colorful__social {
   margin-top: 2.7rem;
-  padding-left: var(--paddingLeftContent);
+
+  @media (--desktop-viewport) {
+    padding-left: var(--paddingLeftContent);
+  }
 }

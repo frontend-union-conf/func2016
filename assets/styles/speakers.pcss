@@ -1,53 +1,68 @@
 @import "mixin";
 
 .speakers {
-  background: svg-load('skew-gray.svg') no-repeat 0 center;
+  background: svg-load('skew-gray-mobile.svg') no-repeat 0 center;
   background-size: 100% 50%;
+
+  @media (--desktop-viewport) {
+    background: svg-load('skew-gray.svg') no-repeat 0 center;
+  }
 }
 
 .speakers__inner {
   @mixin containerMain;
-  padding-top: 10rem;
-  padding-bottom: 2rem;
-  padding-left: 9rem;
-  padding-right: 12.6rem;
+  padding-top: 8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-  position: relative;
+  @media (--desktop-viewport) {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+    padding-left: 9rem;
+    padding-right: 12.6rem;
+    position: relative;
 
-  &::before {
-    content: '';
-    z-index: -1;
-    display: block;
-    background-image: svg-load('bracket-gray.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 18rem;
-    height: 36.8rem;
-    transform: rotate(180deg);
+    &::before {
+      content: '';
+      z-index: -1;
+      display: block;
+      background-image: svg-load('bracket-gray.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 18rem;
+      height: 36.8rem;
+      transform: rotate(180deg);
 
-    position: absolute;
-    top: 10%;
-    left: 6.4rem;
+      position: absolute;
+      top: 10%;
+      left: 6.4rem;
+    }
+
+    &::after {
+      content: '';
+      z-index: -1;
+      display: block;
+      background-image: svg-load('bracket-gray.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 18rem;
+      height: 36.8rem;
+
+      position: absolute;
+      bottom: 12%;
+      right: 6.2rem;
+    }
   }
-
-  &::after {
-    content: '';
-    z-index: -1;
-    display: block;
-    background-image: svg-load('bracket-gray.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 18rem;
-    height: 36.8rem;
-
-    position: absolute;
-    bottom: 12%;
-    right: 6.2rem;
-  }
-
 }
 
 .speakers__columns {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (--medium-viewport) {
+    width: auto;
+  }
+
   &::after {
     content: '';
     display: table;
@@ -56,33 +71,35 @@
 }
 
 .speakers__column {
-
-  @media (width >= 700px) {
+  @media (--medium-viewport) {
     width: 50%;
   }
 
-  &:first-child {
-    & .speakers__item {
-      &:nth-child(even) {
-        width: 31rem;
-        & .speaker__photo {
-          width: 21.9rem;
-          height: 30rem;
+  @media (--desktop-viewport) {
+
+    &:first-child {
+      & .speakers__item {
+        &:nth-child(even) {
+          width: 31rem;
+          & .speaker__photo {
+            width: 21.9rem;
+            height: 30rem;
+          }
         }
       }
     }
-  }
 
-  &:last-child {
+    &:last-child {
 
-    & .speakers__item {
-      margin-top: 40px;
-      &:nth-child(odd) {
-        width: 31rem;
-        margin-left: auto;
-        & .speaker__photo {
-          width: 21.9rem;
-          height: 30rem;
+      & .speakers__item {
+        margin-top: 40px;
+        &:nth-child(odd) {
+          width: 31rem;
+          margin-left: auto;
+          & .speaker__photo {
+            width: 21.9rem;
+            height: 30rem;
+          }
         }
       }
     }
@@ -91,5 +108,8 @@
 
 .speakers__item {
   margin-bottom: 8rem;
-  margin-left: 3.6rem;
+
+  @media (--desktop-viewport) {
+    margin-left: 3.6rem;
+  }
 }
