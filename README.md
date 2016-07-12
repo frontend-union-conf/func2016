@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/frontend-union-conf/func2016.svg?branch=master)](https://travis-ci.org/frontend-union-conf/func2016)
+
 # Getting Started
 
 - Install dependencies: `npm i`

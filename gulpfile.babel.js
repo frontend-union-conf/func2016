@@ -119,6 +119,7 @@ gulp.task("copy", () => {
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
   gulp.src('assets/scripts/picturefill.js').pipe(gulp.dest(scriptsPath.dest));
   gulp.src('favicon.ico').pipe(gulp.dest('build/'));
+  gulp.src('func2015/**/*').pipe(gulp.dest('build/func2015'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));
