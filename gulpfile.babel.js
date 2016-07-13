@@ -70,6 +70,19 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 
+gulp.task('styles2015', () => {
+  return gulp.src([`func2015/assets/styles/main.css`])
+    .pipe($.concat('main.min.css'))
+    .pipe($.postcss([
+      require('postcss-cssnext')(), // http://cssnext.io/features/
+      require('postcss-svgo'), // optimise inline SVG
+      require('postcss-assets')
+    ])).on('error', log)
+    .pipe(development($.csso()))
+    .pipe(development(gulp.dest(`func2015/assets/styles/`)))
+    .pipe(reload({stream: true}));
+});
+
 gulp.task("styles-linter", () => {
   return gulp.src(stylePath.src)
     .pipe($.stylelint({
