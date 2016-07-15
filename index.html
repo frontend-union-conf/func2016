@@ -26,7 +26,7 @@
         <title>Frontend Union Conf</title>
         <use xlink:href="#logo" />
       </svg>
-      <nav class="header__navigation">
+      <nav class="header__navigation" data-navigation>
         <ul class="topnav">
           <li class="topnav__item">
             <a class="topnav__link" data-scroll href="#aboutSection">About</a>
@@ -45,7 +45,9 @@
           </li>
         </ul>
       </nav>
-      <button class="header__toggle" type="button" name="button"><span>Menu</span></button>
+      <button class="header__toggle" type="button" data-toggle aria-label="Menu toggle">
+        <span></span>
+      </button>
     </div>
   </header>
 

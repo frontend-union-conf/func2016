@@ -1,11 +1,13 @@
 @import "mixin";
 
 .speakers {
-  background: svg-load('skew-gray-mobile.svg') no-repeat 0 center;
+  background-image: svg-load('skew-gray-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: 0 center;
   background-size: 100% 50%;
 
   @media (--desktop-viewport) {
-    background: svg-load('skew-gray.svg') no-repeat 0 center;
+    background-image: svg-load('skew-gray.svg');
   }
 }
 

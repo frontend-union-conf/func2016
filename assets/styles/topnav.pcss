@@ -28,6 +28,12 @@
   @media (--before-desktop-viewport) {
     display: block;
     padding: 2rem;
+
+    &:hover,
+    &:focus {
+      color: var(--colorOpposite);
+      background: var(--colorBrand);
+    }
   }
 
   @media (--desktop-viewport) {
