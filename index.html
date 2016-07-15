@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <title>Frontend Union Conf 2016</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Frontend Union Conf 2016" />
+  <meta property="og:url" content="http://frontend-union.co/" />
+  <meta property="og:image" content="http://frontend-union.co/assets/images/illustration.png" />
+  <meta property="og:description" content="Frontend Union is an organization, that brings together several communities to create a unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_" />
   <link rel="stylesheet" href="assets/styles/bundle.css">
   <script src="assets/scripts/picturefill.js" async></script>
 </head>
@@ -32,6 +36,9 @@
           </li>
           <li class="topnav__item">
             <a class="topnav__link" href="http://maps.google.com/maps?q=54.6843%2C25.2918+%28Men%C5%B3+spaustuv%C4%97%2C+%C5%A0iltadar%C5%BEio+g.+6%2C+01124+Vilnius%29" target="_blank">Location</a>
+          </li>
+          <li class="topnav__item">
+            <a class="topnav__link" data-scroll href="#partnersSection">Partners</a>
           </li>
           <li class="topnav__item">
             <a class="topnav__link topnav__link--outline" href="https://ti.to/frontend-union/2016/" target="_blank">Tickets</a>
@@ -73,7 +80,7 @@
             <h2 class="colorful__title">About</h2>
             <div class="colorful__text">
               <p>
-                Frontend Union is an organization, that brings together several communities to create unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_
+                Frontend Union is an organization, that brings together several communities to create a unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_
               </p>
             </div>
           </div>
@@ -112,24 +119,24 @@
                 <div class="speaker__speaker">
                   <div class="speaker__photo">
                     <picture>
-                      <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Barak.jpg">
-                      <img src="assets/images/content/speakers/mobile/Barak.jpg" width="280" height="176" alt="Barak Chamo">
+                      <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Mathias.png 1x, assets/images/content/speakers/Mathias@2x.png 2x">
+                      <img srcset="assets/images/content/speakers/mobile/Mathias.png 1x, assets/images/content/speakers/mobile/Mathias@2x.png 2x" width="280" height="176" alt="Mathias Bynens">
                     </picture>
                   </div>
                   <div class="speaker__title">
                     <h2 class="speaker__name">
-                      <span>Barak</span>
-                      <span>Chamo</span>
+                      <span>Mathias</span>
+                      <span>Bynens</span>
                     </h2>
                     <div class="speaker__about">
-                      <a href="https://twitter.com/GoFoolhardy" target="_blank">@GoFoolhardy</a>, <a href="https://github.com/barakchamo" target="_blank">_barakchamo</a>
+                      <a href="https://twitter.com/mathias" target="_blank">@mathias</a>, <a href="https://mathiasbynens.be/" target="_blank">mathiasbynens.be</a>
                     </div>
                   </div>
                 </div>
                 <div class="speaker__description">
-                  "Generative Art with CSS"
+                  "RegExp.prototype.unicode"
                   <br>
-                  London, UK
+                  Brussels, Belgium
                 </div>
               </article>
             </div>
@@ -160,32 +167,34 @@
                 </div>
               </article>
             </div>
+
             <div class="speakers__item">
               <article class="speaker">
                 <div class="speaker__speaker">
                   <div class="speaker__photo">
                     <picture>
-                      <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Mathias.png 1x, assets/images/content/speakers/Mathias@2x.png 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Mathias.png 1x, assets/images/content/speakers/mobile/Mathias@2x.png 2x" width="280" height="176" alt="Mathias Bynens">
+                      <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Gerard.png 1x, assets/images/content/speakers/Gerard@2x.png 2x">
+                      <img srcset="assets/images/content/speakers/mobile/Gerard.png 1x, assets/images/content/speakers/mobile/Gerard@2x.png 2x" width="280" height="176" alt="Gerard Sans">
                     </picture>
                   </div>
                   <div class="speaker__title">
                     <h2 class="speaker__name">
-                      <span>Mathias</span>
-                      <span>Bynens</span>
+                      <span>Gerard</span>
+                      <span>Sans</span>
                     </h2>
                     <div class="speaker__about">
-                      <a href="https://twitter.com/mathias" target="_blank">@mathias</a>, <a href="https://mathiasbynens.be/" target="_blank">mathiasbynens.be</a>
+                      <a href="https://twitter.com/gerardsans" target="_blank">@gerardsans</a>, <a href="https://github.com/gsans" target="_blank">_gsans</a>
                     </div>
                   </div>
                 </div>
                 <div class="speaker__description">
-                  "RegExp.prototype.unicode"
+                  "Building Apps using Redux with Angular 2"
                   <br>
-                  Brussels, Belgium
+                  London, UK
                 </div>
               </article>
             </div>
+
           </div>
           <div class="speakers__column">
             <div class="speakers__item">
@@ -242,35 +251,66 @@
               </article>
             </div>
 
-            <div class="speakers__item">
-              <article class="speaker">
-                <div class="speaker__speaker">
-                  <div class="speaker__photo">
-                    <picture>
-                      <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Gerard.png 1x, assets/images/content/speakers/Gerard@2x.png 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Gerard.png 1x, assets/images/content/speakers/mobile/Gerard@2x.png 2x" width="280" height="176" alt="Gerard Sans">
-                    </picture>
-                  </div>
-                  <div class="speaker__title">
-                    <h2 class="speaker__name">
-                      <span>Gerard</span>
-                      <span>Sans</span>
-                    </h2>
-                    <div class="speaker__about">
-                      <a href="https://twitter.com/gerardsans" target="_blank">@gerardsans</a>, <a href="https://github.com/gsans" target="_blank">_gsans</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="speaker__description">
-                  "Building Apps using Redux with Angular 2"
-                  <br>
-                  London, UK
-                </div>
-              </article>
-            </div>
-
-
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsors" id="partnersSection">
+      <div class="sponsors__inner">
+        <header class="sponsors__header">
+          <h2>Partners</h2>
+        </header>
+
+        <div class="sponsors-group">
+          <h3 class="sponsors-group__header">media</h3>
+          <ul class="sponsors__list sponsors__list--medium">
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://webnotbombs.net/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/webnotbombs.svg" alt="Web Not Bombs" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://moscowjs.ru" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/moskowjs.svg" alt="MoscowJS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://web-standards.ru/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/webstandards2.svg" alt="Web Standards" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/pitercss" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/pitercss.svg" alt="PiterCSS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/sofiajavascript" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/sofiajs.png" alt="SofiaJS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://apps4all.ru/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/apps4all.png" alt="Apps4All" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/KharkivJS" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/kharkivjs.jpg" alt="KharkivJS Community" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://www.facebook.com/londonJSCommunity/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/londonjs.png" alt="London JavaScript Community" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/gopiterjs" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/piterjs.png" alt="PiterJS" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -294,10 +334,16 @@
             <a class="secondary-nav__link" data-scroll href="#organisersSection">Organizers</a>
           </li>
           <li class="secondary-nav__item">
+            <a class="secondary-nav__link" data-scroll href="#partnersSection">Partners</a>
+          </li>
+          <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="https://ti.to/frontend-union/2016/" target="_blank">Tickets</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="http://confcodeofconduct.com/" target="_blank">Code of conduct</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="http://frontend-union.co/func2015" target="_blank">FUNC 2015</a>
           </li>
         </ul>
       </div>

@@ -70,6 +70,19 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 
+gulp.task('styles2015', () => {
+  return gulp.src([`func2015/assets/styles/main.css`])
+    .pipe($.concat('main.min.css'))
+    .pipe($.postcss([
+      require('postcss-cssnext')(), // http://cssnext.io/features/
+      require('postcss-svgo'), // optimise inline SVG
+      require('postcss-assets')
+    ])).on('error', log)
+    .pipe(development($.csso()))
+    .pipe(development(gulp.dest(`func2015/assets/styles/`)))
+    .pipe(reload({stream: true}));
+});
+
 gulp.task("styles-linter", () => {
   return gulp.src(stylePath.src)
     .pipe($.stylelint({
@@ -119,6 +132,7 @@ gulp.task("copy", () => {
   gulp.src(imagesPath.src).pipe(gulp.dest(imagesPath.dest));
   gulp.src('assets/scripts/picturefill.js').pipe(gulp.dest(scriptsPath.dest));
   gulp.src('favicon.ico').pipe(gulp.dest('build/'));
+  gulp.src('func2015/**/*').pipe(gulp.dest('build/func2015'));
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'build']));

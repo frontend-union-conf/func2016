@@ -1,0 +1,885 @@
+/* line 5, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, /Users/obnoxious_mari/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'PTMonoBold';
+  src: url(../fonts/PTM75F_W.eot);
+  src: url(../fonts/PTM75F_W.eot?#iefix) format("embedded-opentype"), url(../fonts/PTM75F_W.woff) format("woff"), url(../fonts/PTM75F_W.ttf) format("truetype"), url(../fonts/PTM75F_W.svg#PTMono-Bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSansRegular';
+  src: url(../fonts/PTS55F_W.eot);
+  src: url(../fonts/PTS55F_W.eot?#iefix) format("embedded-opentype"), url(../fonts/PTS55F_W.woff) format("woff"), url(../fonts/PTS55F_W.ttf) format("truetype"), url(../fonts/PTS55F_W.svg#PTSans-Regular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PTSansBold';
+  src: url(../fonts/PTS75F_W.eot);
+  src: url(../fonts/PTS75F_W.eot?#iefix) format("embedded-opentype"), url(../fonts/PTS75F_W.woff) format("woff"), url(../fonts/PTS75F_W.ttf) format("truetype"), url(../fonts/PTS75F_W.svg#PTSans-Bold) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 7, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+html, body {
+  width: 100vw;
+  height: 100%;
+  min-width: 996px;
+}
+
+/* line 13, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 17, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+.registrationButton {
+  border: 4px solid blue;
+}
+/* line 20, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+.registrationButton:hover {
+  background-color: blue;
+}
+
+/* line 26, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+pre .wrap {
+  white-space: normal;
+}
+
+@media only screen and (min-width: 996px) {
+  /* line 32, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/basics.scss */
+  html {
+    overflow-x: hidden;
+  }
+}
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView {
+  padding: 0 80px 105px;
+  font-family: 'PT Sans', 'PTSansRegular', Helvetica, Arial, sans-serif;
+}
+/* line 5, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul {
+  -moz-columns: 330px 3;
+  -webkit-columns: 330px 3;
+  columns: 330px 3;
+  -moz-column-gap: 80px;
+  -webkit-column-gap: 80px;
+  column-gap: 80px;
+}
+/* line 9, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 105px;
+}
+/* line 14, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li div {
+  width: 330px;
+  height: 186px;
+  background-size: cover;
+  background-position: center;
+}
+/* line 21, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li h3 {
+  margin-top: 22px;
+  font-family: 'PT Sans Bold', 'PTSansBold', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  line-height: 46px;
+}
+/* line 28, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li .speaker {
+  margin-top: 15px;
+  font-family: 'PT Sans Bold', 'PTSansBold', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+/* line 34, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li .from {
+  margin-top: 4px;
+  font-size: 16px;
+}
+/* line 38, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li .from a {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 42, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li .from a:hover {
+  text-decoration: underline;
+}
+/* line 48, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/columns.scss */
+.columnsView ul li .about {
+  margin-top: 27px;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar {
+  position: fixed;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -moz-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  width: 100vw;
+  min-width: 996px;
+  height: 90px;
+  font-family: 'PT Sans Bold', 'PTSansBold', Helvetica, Arial, sans-serif;
+  background-color: #1a1a1a;
+}
+/* line 15, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1.74px;
+}
+/* line 23, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .logo {
+  box-sizing: border-box;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  background-color: blue;
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+}
+/* line 31, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .logo div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 56px;
+  margin: 0 auto;
+  font-size: 37px;
+  line-height: 84px;
+}
+/* line 41, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar aside {
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 45, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .welcomeMenuItem {
+  padding: 0 30px;
+  background-color: rgba(255, 255, 255, 0);
+  line-height: 92px;
+}
+/* line 50, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .welcomeMenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* line 55, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .registrationButton {
+  height: 60px;
+  margin: 15px 30px 0;
+  padding: 0 40px;
+  line-height: 54px;
+  border: 4px solid blue;
+}
+
+/* line 66, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar {
+  width: 100vw;
+  height: 60px;
+}
+/* line 73, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+/* line 81, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .logo {
+  width: 60px;
+  height: 60px;
+}
+/* line 84, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .logo div {
+  width: 36px;
+  font-size: 23px;
+  line-height: 56px;
+}
+/* line 91, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .welcomeMenuItem {
+  padding: 0 20px;
+  line-height: 62px;
+}
+/* line 96, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/menubar.scss */
+#menuBar .registrationButton {
+  height: 40px;
+  padding: 0 26px;
+  margin: 10px 20px 0;
+  line-height: 34px;
+}
+
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  min-width: 996px;
+  min-height: 767px;
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+  overflow: hidden;
+  font-family: 'PT Sans Bold', 'PTSansBold', Helvetica, Arial, sans-serif;
+}
+/* line 16, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  height: 90px;
+}
+/* line 24, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 1.74px;
+}
+/* line 32, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav .logo {
+  display: block;
+  width: 206px;
+  height: 90px;
+  background-image: url(../images/logo-full.png);
+}
+/* line 39, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav aside {
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 43, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav .welcomeMenuItem {
+  padding: 0 30px;
+  line-height: 92px;
+}
+/* line 47, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav .welcomeMenuItem a:hover {
+  color: blue;
+}
+/* line 52, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection nav .registrationButton {
+  height: 60px;
+  padding: 0 40px;
+  margin: 15px 30px 0;
+  line-height: 54px;
+}
+/* line 60, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  cursor: default;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* line 67, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection footer div {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  margin: 0 6px;
+}
+/* line 75, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection footer div.current {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* line 79, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection footer div:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* line 85, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection .topicsSlider {
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 700%;
+  height: 100%;
+  min-height: 767px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* line 97, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection .topicsSlider .topic {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  min-width: 996px;
+  min-height: 767px;
+  padding: 50px 50px 160px;
+  background-size: cover;
+  background-position: center;
+}
+/* line 110, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection .topicsSlider .topic pre {
+  margin-left: 110px;
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-size: 50px;
+  line-height: 65px;
+  color: white;
+}
+/* line 118, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection .topicsSlider .topic .name {
+  color: blue;
+}
+/* line 122, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection .topicsSlider .topic .date,
+#welcomeSection .topicsSlider .topic .time,
+#welcomeSection .topicsSlider .topic .separator {
+  font-size: 34px;
+  color: #999999;
+}
+/* line 130, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+#welcomeSection .topicsSlider .topic .time,
+#welcomeSection .topicsSlider .topic .separator {
+  display: none;
+}
+
+@media only screen and (max-width: 1366px) {
+  /* line 140, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection {
+    min-height: 540px;
+    padding: 30px;
+  }
+  /* line 144, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection nav {
+    height: 60px;
+  }
+  /* line 147, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection nav a {
+    font-size: 15px;
+  }
+  /* line 151, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection nav .logo {
+    width: 138px;
+    height: 60px;
+    background-size: cover;
+  }
+  /* line 157, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection nav .welcomeMenuItem {
+    line-height: 63px;
+  }
+  /* line 161, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection nav .registrationButton {
+    height: 40px;
+    padding: 0 26px;
+    margin: 10px 20px 0;
+    line-height: 34px;
+  }
+  /* line 169, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection .topicsSlider {
+    min-height: 540px;
+  }
+  /* line 172, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection .topicsSlider .topic {
+    min-height: 540px;
+    padding: 30px 30px 100px;
+  }
+  /* line 176, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection .topicsSlider .topic pre {
+    margin-left: 70px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+  /* line 182, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/welcome.scss */
+  #welcomeSection .topicsSlider .topic .date {
+    font-size: 24px;
+  }
+}
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection {
+  padding: 100px;
+}
+/* line 4, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection section {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 8, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection section article {
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+/* line 14, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection section article div {
+  width: 540px;
+  padding-left: 40px;
+}
+/* line 18, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection section article div .blue {
+  color: blue;
+}
+/* line 19, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection section article div .grey {
+  color: #666666;
+}
+/* line 24, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection footer {
+  padding-top: 100px;
+}
+/* line 27, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection footer h3 {
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #666666;
+  text-align: center;
+}
+/* line 33, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection footer h3 a {
+  color: #666666;
+}
+/* line 36, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+#scheduleSection footer h3 a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1366px) {
+  /* line 47, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+  #scheduleSection section {
+    width: 1050px;
+    margin: 0 auto;
+  }
+  /* line 51, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+  #scheduleSection section article {
+    font-size: 22px;
+    line-height: 33px;
+  }
+  /* line 55, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+  #scheduleSection section article div {
+    width: 440px;
+    padding-left: 30px;
+  }
+  /* line 63, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+  #scheduleSection footer h3 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  /* line 72, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+  #scheduleSection section {
+    width: auto;
+    margin: 0 auto;
+  }
+  /* line 77, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/schedule.scss */
+  #scheduleSection section article div {
+    width: 300px;
+  }
+}
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/about.scss */
+#aboutSection,
+#locationSection {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 996px;
+  min-height: 767px;
+  padding: 50px 50px 50px 160px;
+  background-color: blue;
+  color: white;
+}
+/* line 13, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/about.scss */
+#aboutSection pre,
+#locationSection pre {
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+/* line 20, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/about.scss */
+#aboutSection a,
+#locationSection a {
+  color: inherit;
+}
+
+/* line 25, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/about.scss */
+#locationSection {
+  background-color: #1a1a1a;
+}
+
+@media only screen and (max-width: 1366px) {
+  /* line 44, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/about.scss */
+  #aboutSection,
+  #locationSection {
+    min-height: 540px;
+    padding: 30px 30px 30px 70px;
+  }
+  /* line 49, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/about.scss */
+  #aboutSection pre,
+  #locationSection pre {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+/* line 4, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+#programmeSection ul li h3 {
+  color: blue;
+}
+/* line 6, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+#programmeSection ul li .from {
+  color: #b3b3b3;
+}
+
+@media only screen and (max-width: 1310px) {
+  /* line 13, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection {
+    padding: 0 60px 105px;
+  }
+  /* line 16, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul {
+    -moz-columns: 330px 3;
+    -webkit-columns: 330px 3;
+    columns: 330px 3;
+    -moz-column-gap: 60px;
+    -webkit-column-gap: 60px;
+    column-gap: 60px;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  /* line 24, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection {
+    padding: 0 60px 105px;
+  }
+  /* line 27, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul {
+    -moz-columns: 300px 3;
+    -webkit-columns: 300px 3;
+    columns: 300px 3;
+    -moz-column-gap: 40px;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+  }
+  /* line 32, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul li div {
+    width: 300px;
+    height: 169px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  /* line 42, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection {
+    padding: 0 60px 105px;
+  }
+  /* line 45, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul {
+    -moz-columns: 300px 3;
+    -webkit-columns: 300px 3;
+    columns: 300px 3;
+    -moz-column-gap: 40px;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+  }
+  /* line 50, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul li div {
+    width: 300px;
+    height: 169px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  /* line 60, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection {
+    padding: 0 123px 105px;
+  }
+  /* line 63, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul {
+    -moz-columns: 300px 2;
+    -webkit-columns: 300px 2;
+    columns: 300px 2;
+    -moz-column-gap: 150px;
+    -webkit-column-gap: 150px;
+    column-gap: 150px;
+  }
+  /* line 68, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/programme.scss */
+  #programmeSection ul li div {
+    width: 300px;
+    height: 169px;
+  }
+}
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/sponsors.scss */
+#sponsorsSection {
+  padding-bottom: 30px;
+}
+/* line 4, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/sponsors.scss */
+#sponsorsSection section {
+  padding-top: 100px;
+  text-align: center;
+}
+/* line 8, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/sponsors.scss */
+#sponsorsSection section h3 {
+  margin-bottom: 40px;
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #666666;
+}
+/* line 15, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/sponsors.scss */
+#sponsorsSection section ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  width: 960px;
+  margin: 0 auto;
+}
+/* line 21, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/sponsors.scss */
+#sponsorsSection section ul li {
+  display: -webkit-flex;
+  display: flex;
+  height: 90px;
+}
+
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection {
+  background: #1a1a1a;
+}
+/* line 5, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection h2 {
+  padding-top: 140px;
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+/* line 13, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection .thanksTo {
+  padding-top: 100px;
+  font-family: 'PT Mono Bold', 'PTMonoBold', 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  color: white;
+}
+/* line 22, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection .thanksTo a {
+  color: white;
+}
+/* line 25, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection .thanksTo a:hover {
+  text-decoration: none;
+}
+/* line 33, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection ul li h3 {
+  color: white;
+}
+/* line 34, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection ul li .speaker {
+  color: white;
+}
+/* line 35, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+#organizersSection ul li .from {
+  color: #b3b3b3;
+}
+
+@media only screen and (max-width: 1310px) {
+  /* line 43, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection {
+    padding: 0 60px 105px;
+  }
+  /* line 46, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul {
+    -moz-columns: 330px 3;
+    -webkit-columns: 330px 3;
+    columns: 330px 3;
+    -moz-column-gap: 60px;
+    -webkit-column-gap: 60px;
+    column-gap: 60px;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  /* line 54, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection {
+    padding: 0 60px 105px;
+  }
+  /* line 57, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul {
+    -moz-columns: 300px 3;
+    -webkit-columns: 300px 3;
+    columns: 300px 3;
+    -moz-column-gap: 40px;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+  }
+  /* line 62, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul li div {
+    width: 300px;
+    height: 169px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  /* line 72, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection {
+    padding: 0 60px 105px;
+  }
+  /* line 75, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul {
+    -moz-columns: 300px 3;
+    -webkit-columns: 300px 3;
+    columns: 300px 3;
+    -moz-column-gap: 0px;
+    -webkit-column-gap: 0px;
+    column-gap: 0px;
+  }
+  /* line 80, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul li div {
+    width: 300px;
+    height: 169px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  /* line 90, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection {
+    padding: 0 20px 105px;
+  }
+  /* line 93, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul {
+    -moz-columns: 300px 3;
+    -webkit-columns: 300px 3;
+    columns: 300px 3;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+  }
+  /* line 98, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/organizers.scss */
+  #organizersSection ul li div {
+    width: 300px;
+    height: 169px;
+  }
+}
+/* line 1, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/footer.scss */
+#footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 22px 30px;
+  min-width: 996px;
+  height: 60px;
+  background-color: #1a1a1a;
+  font-family: 'PT Sans Bold', 'PTSansBold', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: white;
+}
+/* line 15, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/footer.scss */
+#footer a {
+  text-decoration: none;
+  color: white;
+}
+/* line 19, /Users/obnoxious_mari/projects/FrontendUnionConf/app/assets/stylesheets/footer.scss */
+#footer a:hover {
+  text-decoration: underline;
+}
