@@ -61,11 +61,12 @@
     height: 100%;
     right: 0;
     top: 0;
-    width: 260px;
-    padding-top: 7rem;
+    width: 258px;
+    padding-top: 2.3rem;
     padding-bottom: 2rem;
     overflow-y: auto;
-    transform: translateX(260px);
+    will-change: transform;
+    transform: translateX(258px);
     transition: transform 0.3s;
     background: var(--colorDark);
     color: var(--colorOpposite);
@@ -76,10 +77,21 @@
   }
 }
 
+.no-js .header__navigation {
+  @media (--before-desktop-viewport) {
+    position: static;
+    width: 100%;
+    padding-top: 2rem;
+    transform: translateX(0);
+    background: var(--colorOpposite);
+    color: inherit;
+  }
+}
+
 .header__toggle {
   border: 0;
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   right: 2rem;
   overflow: hidden;
   background: transparent;
@@ -127,4 +139,8 @@
   @media (--desktop-viewport) {
     display: none;
   }
+}
+
+.no-js .header__toggle {
+  display: none;
 }

@@ -9,6 +9,9 @@
   <meta property="og:url" content="http://frontend-union.co/" />
   <meta property="og:image" content="http://frontend-union.co/assets/images/illustration.png" />
   <meta property="og:description" content="Frontend Union is an organization, that brings together several communities to create a unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_" />
+  <script>
+    document.documentElement.className = document.documentElement.className.replace("no-js","js");
+  </script>
   <link rel="stylesheet" href="assets/styles/bundle.css">
   <script src="assets/scripts/picturefill.js" async></script>
 </head>
@@ -22,8 +25,8 @@
 
   <header class="header" data-sticky>
     <div class="header__inner">
-      <svg class="header__logo" width="142" height="64" aria-labelledby="title">
-        <title>Frontend Union Conf</title>
+      <svg class="header__logo" width="142" height="64" aria-labelledby="title" role="img">
+        <title id="title">Frontend Union Conf</title>
         <use xlink:href="#logo" />
       </svg>
       <nav class="header__navigation" data-navigation>
@@ -122,7 +125,7 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Mathias.png 1x, assets/images/content/speakers/Mathias@2x.png 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Mathias.png 1x, assets/images/content/speakers/mobile/Mathias@2x.png 2x" width="280" height="176" alt="Mathias Bynens">
+                      <img src="assets/images/content/speakers/mobile/Mathias.png" srcset="assets/images/content/speakers/mobile/Mathias@2x.png 2x" width="280" height="176" alt="Mathias Bynens">
                     </picture>
                   </div>
                   <div class="speaker__title">
@@ -149,7 +152,7 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Princiya.jpg 1x, assets/images/content/speakers/Princiya@2x.jpg 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Princiya.jpg 1x, assets/images/content/speakers/mobile/Princiya@2x.jpg 2x" width="280" height="176" alt="Princiya Marina">
+                      <img src="assets/images/content/speakers/mobile/Princiya.jpg" srcset="assets/images/content/speakers/mobile/Princiya@2x.jpg 2x" width="280" height="176" alt="Princiya Marina">
                     </picture>
                   </div>
                   <div class="speaker__title">
@@ -176,7 +179,7 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Gerard.png 1x, assets/images/content/speakers/Gerard@2x.png 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Gerard.png 1x, assets/images/content/speakers/mobile/Gerard@2x.png 2x" width="280" height="176" alt="Gerard Sans">
+                      <img src="assets/images/content/speakers/mobile/Gerard.png" srcset="assets/images/content/speakers/mobile/Gerard@2x.png 2x" width="280" height="176" alt="Gerard Sans">
                     </picture>
                   </div>
                   <div class="speaker__title">
@@ -205,7 +208,7 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Martin.jpg 1x, assets/images/content/speakers/Martin@2x.jpg 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Martin.jpg 1x, assets/images/content/speakers/mobile/Martin@2x.jpg 2x" width="280" height="176" alt="Martin Splitt">
+                      <img src="assets/images/content/speakers/mobile/Martin.jpg" srcset="assets/images/content/speakers/mobile/Martin@2x.jpg 2x" width="280" height="176" alt="Martin Splitt">
                     </picture>
                   </div>
                   <div class="speaker__title">
@@ -232,7 +235,7 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Fabian.jpg 1x, assets/images/content/speakers/Fabian@2x.jpg 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Fabian.jpg 1x, assets/images/content/speakers/mobile/Fabian@2x.jpg 2x" width="280" height="176" alt="Fabian Fabian">
+                      <img src="assets/images/content/speakers/mobile/Fabian.jpg" srcset="assets/images/content/speakers/mobile/Fabian@2x.jpg 2x" width="280" height="176" alt="Fabian Fabian">
                     </picture>
                   </div>
                   <div class="speaker__title">
@@ -261,11 +264,15 @@
     <section class="sponsors" id="partnersSection">
       <div class="sponsors__inner">
         <header class="sponsors__header">
-          <h2>Partners</h2>
+          <h2 class="sponsors__title">Partners</h2>
+          <!-- <div class="sponsors__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+          </div> -->
+          <a class="sponsors__button" data-scroll href="#organisersSection">Participate</a>
         </header>
 
         <div class="sponsors-group">
-          <h3 class="sponsors-group__header">media</h3>
+          <h3 class="sponsors-group__header">Media</h3>
           <ul class="sponsors__list sponsors__list--medium">
             <li class="sponsors__item">
               <a class="sponsors__link" href="http://webnotbombs.net/" target="_blank">
