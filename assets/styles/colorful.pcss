@@ -7,36 +7,59 @@
 .colorful {
   background: var(--colorDark);
   color: var(--colorOpposite);
+
+  @media (--before-desktop-viewport) {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      background: svg-load('triangle-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 8.7rem;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
 }
 
 .colorful__inner {
   @mixin containerMain;
-  padding-top: 3.2rem;
-  padding-bottom: 9rem;
-  background-image:
-    url('../images/equal.png'),
-    url('../images/v90.png');
-  background-position:
-    86% 81%,
-    10% 55%;
-  background-repeat:
-    no-repeat,
-    no-repeat;
+  padding-top: 6rem;
+  padding-bottom: 12rem;
+
+  @media (--desktop-viewport) {
+    padding-top: 3.2rem;
+    padding-bottom: 9rem;
+    background-image:
+      url('../images/equal.png'),
+      url('../images/v90.png');
+    background-position:
+      86% 81%,
+      10% 55%;
+    background-repeat:
+      no-repeat,
+      no-repeat;
+  }
 }
 
 .colorful__container {
-  padding-left: 20%;
-  padding-right: 30%;
+  @media (--desktop-viewport) {
+    padding-left: 20%;
+    padding-right: 30%;
+  }
 }
 
 .colorful__content {
   font-size: 1.4rem;
   font-family: var(--fontFamilyMono);
   line-height: 1.6;
-  margin-top: 3rem;
+  padding-top: 3rem;
 
   &:first-child {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
@@ -81,5 +104,8 @@
 
 .colorful__social {
   margin-top: 2.7rem;
-  padding-left: var(--paddingLeftContent);
+
+  @media (--desktop-viewport) {
+    padding-left: var(--paddingLeftContent);
+  }
 }

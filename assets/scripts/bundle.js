@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 let sticky = document.querySelector('[data-sticky]');
 let stickyHeight = sticky.offsetHeight;
-let stickyHeightNew = 74;
+let stickyHeightNew = 6;
 let stickyPoint = document.querySelector('[data-sticky-action]').offsetTop - stickyHeightNew;
 
 let main = document.querySelector('main');
@@ -40,5 +40,14 @@ window.onscroll = () => {
     logoText.style.display = "block";
   }
 };
+
+let navToogle = document.querySelector('[data-toggle]');
+let nav = document.querySelector('[data-navigation]')
+
+navToogle.addEventListener("click",function(e){
+  e.preventDefault();
+  navToogle.classList.toggle('header__toggle--open');
+  nav.classList.toggle('header__navigation--open');
+},false);
 
 })();

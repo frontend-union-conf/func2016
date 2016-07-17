@@ -4,5 +4,12 @@
 
 .branding__logo {
   vertical-align: middle;
-  margin-left: -0.2em;
+
+  @media (--before-desktop-viewport) {
+    width: 110px;
+  }
+
+  @media (--desktop-viewport) {
+    margin-left: -0.2em;
+  }
 }

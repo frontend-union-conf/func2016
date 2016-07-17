@@ -9,7 +9,6 @@
   &--sticky {
     background: #111;
     color: var(--colorOpposite);
-    animation: smooth-entry 0.2s;
 
     position: fixed;
     top: 0;
@@ -17,14 +16,14 @@
     width: 100%;
 
     & .header__inner {
-      padding-left: 0;
-      padding-top: 0;
+      padding: 0;
       align-items: center;
+    }
 
+    & .header__toggle {
+      &::before,
       &::after {
-        content: '';
-        display: block;
-        min-height: 7rem;
+        border-color: white;
       }
     }
   }
@@ -32,19 +31,116 @@
 
 .header__inner {
   @mixin containerMain;
+  padding: 2rem;
+  position: relative;
 
-  display: flex;
-  padding-right: 5.6rem;
-  padding-left: 6.5rem;
-  padding-top: 3.8rem;
+  @media (--desktop-viewport) {
+    display: flex;
+    padding-right: 5.6rem;
+    padding-left: 6.5rem;
+    padding-top: 3.8rem;
+  }
 }
 
 .header__logo {
   margin: 0;
   vertical-align: middle;
   margin-top: -0.4rem;
+
+  @media (--desktop-viewport) {
+    width: 16.5rem;
+    height: 7.4rem;
+  }
 }
 
 .header__navigation {
   margin-left: auto;
+
+  @media (--before-desktop-viewport) {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 258px;
+    padding-top: 2.3rem;
+    padding-bottom: 2rem;
+    overflow-y: auto;
+    will-change: transform;
+    transform: translateX(258px);
+    transition: transform 0.3s;
+    background: var(--colorDark);
+    color: var(--colorOpposite);
+  }
+
+  &--open {
+    transform: translateX(0);
+  }
+}
+
+.no-js .header__navigation {
+  @media (--before-desktop-viewport) {
+    position: static;
+    width: 100%;
+    padding-top: 2rem;
+    transform: translateX(0);
+    background: var(--colorOpposite);
+    color: inherit;
+  }
+}
+
+.header__toggle {
+  border: 0;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: transform 0.25s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    width: 26px;
+    border-top: 3px solid #000;
+    display: block;
+    transition: transform 0.25s;
+  }
+
+  & span {
+    display: block;
+    height: 7px;
+  }
+
+  &--open {
+    position: fixed;
+    transform: rotate(90deg);
+
+    & span {
+      height: 0;
+      margin: -3px 0;
+    }
+
+    &::before {
+      border-color: white;
+      transform: rotate(45deg);
+    }
+    &::after {
+      border-color: white;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (--desktop-viewport) {
+    display: none;
+  }
+}
+
+.no-js .header__toggle {
+  display: none;
 }

@@ -2,24 +2,46 @@
 
 .topnav {
   list-style: none;
-  display: flex;
   color: inherit;
   margin: 0;
+  padding: 0;
+
+  @media (--desktop-viewport) {
+    display: flex;
+  }
 }
 
 .topnav__item {
-  margin-left: 1rem;
+  @media (--desktop-viewport) {
+    margin-left: 1rem;
 
-  &:first-child {
-    margin-left: 0;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 
 .topnav__link {
+  all: initial;
+  -webkit-font-smoothing: antialiased;
+
   @mixin headerFont;
   color: inherit;
 
-  padding: 0.8rem 1.2rem 0.7rem;
+  @media (--before-desktop-viewport) {
+    display: block;
+    padding: 2rem;
+
+    &:hover,
+    &:focus {
+      color: var(--colorOpposite);
+      background: var(--colorBrand);
+    }
+  }
+
+  @media (--desktop-viewport) {
+    padding: 0.8rem 1.2rem 0.7rem;
+  }
 
   &:hover,
   &:focus {
@@ -28,7 +50,6 @@
 
   &--outline {
     border: 0.3rem solid var(--colorBrand);
-    margin-left: 1.4rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 
@@ -36,6 +57,10 @@
     &:focus {
       color: var(--colorOpposite);
       background: var(--colorBrand);
+    }
+
+    @media (--desktop-viewport) {
+      margin-left: 1.4rem;
     }
   }
 }
