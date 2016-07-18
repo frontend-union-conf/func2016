@@ -68,6 +68,12 @@
     padding: 0 0.5rem;
   }
 
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
   @media (--before-desktop-viewport) {
     font-size: 3.7rem;
   }
