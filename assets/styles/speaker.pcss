@@ -1,5 +1,9 @@
 @import "mixin";
 
+.speaker {
+  position: relative;
+}
+
 .speaker__speaker {
   position: relative;
 }
@@ -105,11 +109,24 @@
 
 .speaker__description {
   padding-top: 3.3rem;
+  font-size: 2rem;
+  font-weight: 700;
 
   @media (--before-desktop-viewport) {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-top: 2rem;
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+}
+
+.speaker__blurb {
+  padding-top: 1.5rem;
+  & p {
+    margin: 0.3rem 0;
+  }
+
+  @media (--before-desktop-viewport) {
+    font-size: 2rem;
   }
 }
