@@ -1,20 +1,65 @@
 .contacts__map {
-  height: 40.6rem;
+  height: 28.7rem;
   background: #f2f2f2;
-  background: url('../images/map.jpg') no-repeat center;
+
+  @media (--desktop-viewport) {
+    height: 40.6rem;
+  }
+}
+
+.no-js .contacts__map {
+  background: url('../images/map.jpg') no-repeat center #f2f2f2;
 }
 
 .contacts__inner {
   @mixin containerMain;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
-  display: flex;
-  padding-left: 6.6rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+
+  @media (--before-desktop-viewport) {
+    font-size: 2rem;
+  }
+
+  @media (--desktop-viewport) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.contacts__header {
+  font-size: 3.3rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
+  @media (--desktop-viewport) {
+    font-size: 2.8rem;
+  }
+}
+
+.contacts__subheader {
+  @mixin fontSubHeader;
+
+  @media (--desktop-viewport) {
+    padding-top: 2.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.contacts__address {
+  font-style: normal;
 }
 
 .contacts__item {
-  max-width: 25.6rem;
-  margin-left: 13.4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-bottom: 4rem;
+
+  @media (--desktop-viewport) {
+    width: 33.33%;
+    margin-bottom: 0;
+  }
 
   & a {
     text-decoration: none;

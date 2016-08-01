@@ -4,10 +4,11 @@
   background-image: svg-load('skew-gray-mobile.svg');
   background-repeat: no-repeat;
   background-position: 0 center;
-  background-size: 100% 50%;
+  background-size: 100% 30%;
 
   @media (--desktop-viewport) {
     background-image: svg-load('skew-gray.svg');
+    background-size: 100% 50%;
   }
 }
 
@@ -73,6 +74,8 @@
 }
 
 .speakers__column {
+  float: left;
+
   @media (--medium-viewport) {
     width: 50%;
   }

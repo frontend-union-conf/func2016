@@ -75,28 +75,35 @@
 }
 
 .sponsors-group__header {
-  font-family: inherit;
-  margin: 8px 0;
-  font-size: 1.2rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #c2c2c2;
-  margin-top: 0;
-  margin-bottom: 1.4rem;
+  @mixin fontSubHeader;
+
+  @media (--before-medium-viewport) {
+    padding-left: 4rem;
+  }
 }
 
 .sponsors__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (--medium-viewport) {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 5.6rem;
   }
 
   &--large {
+    @media (--before-medium-viewport) {
+      & .sponsors__item {
+        width: 100%;
+        &:not(:first-child) {
+          border-top-width: 0;
+        }
+      }
+    }
+
     @media (--medium-viewport) {
       & .sponsors__item {
         width: 33.3%;
@@ -116,9 +123,15 @@
   &--medium {
     @media (--before-medium-viewport) {
       & .sponsors__item {
+        width: 50%;
+        height: 11.4rem;
 
-        &:not(:last-child) {
-          border-bottom-width: 0;
+        &:nth-child(2n-1) {
+          border-right-width: 0;
+        }
+
+        &:not(:nth-child(-n+2)) {
+          border-top-width: 0;
         }
       }
     }
@@ -141,6 +154,22 @@
   }
 
   &--small {
+    @media (--before-medium-viewport) {
+      & .sponsors__item {
+        width: 33.3%;
+        height: 9.3rem;
+        border-left-width: 0;
+
+        &:nth-child(3n+1) {
+          border-left-width: 1px;
+        }
+
+        &:nth-child(n+4) {
+          border-top-width: 0;
+        }
+      }
+    }
+
     @media (--medium-viewport) {
       & .sponsors__item {
         width: 20%;
@@ -161,8 +190,8 @@
 
 .sponsors__item {
   border: 1px solid #ebebeb;
-  height: 13.8rem;
   padding: 1rem;
+  height: 13.8rem;
 
   @media (--desktop-viewport) {
     height: 16rem;
@@ -170,16 +199,19 @@
 }
 
 .sponsors__link {
+  position: relative;
+  display: block;
+  width: 100%;
   height: 100%;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .sponsors__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   max-height: 100%;
-  vertical-align: middle;
 }
 
 /*

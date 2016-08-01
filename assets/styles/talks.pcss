@@ -8,55 +8,68 @@
   &::after {
     content: '';
     display: block;
-    background: svg-load('triangle.svg');
+    background: svg-load('triangle-mobile.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
-    height: 29.3rem;
+    height: 8.7rem;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+
+    @media (--desktop-viewport) {
+      background: svg-load('triangle.svg');
+      height: 29.3rem;
+    }
   }
 }
 
 .talks__inner {
   @mixin containerMain;
-  padding-top: 13.7rem;
-  padding-bottom: 33rem;
+  padding-top: 7.4rem;
+  padding-bottom: 16rem;
 
-  background-image:
-    url('../images/III.png'),
-    url('../images/v90.png'),
-    url('../images/III.png'),
-    url('../images/equal.png'),
-    url('../images/v90.png'),
-    url('../images/equal.png');
-  background-position:
-    50% 5%,
-    4% 30%,
-    4% 60%,
-    96% 40%,
-    96% 70%,
-    20% 88%;
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat;
+  @media (--desktop-viewport) {
+    padding-top: 13.7rem;
+    padding-bottom: 33rem;
+    background-image:
+      url('../images/III.png'),
+      url('../images/v90.png'),
+      url('../images/III.png'),
+      url('../images/equal.png'),
+      url('../images/v90.png'),
+      url('../images/equal.png');
+    background-position:
+      50% 5%,
+      4% 30%,
+      4% 60%,
+      96% 40%,
+      96% 70%,
+      20% 88%;
+    background-repeat:
+      no-repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat,
+      no-repeat;
+  }
 }
 
 .talks__table {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  font-size: 2.2rem;
-  padding: 0 12.6rem;
+  @media (--desktop-viewport) {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 2.2rem;
+    padding: 0 12.6rem;
+  }
 }
 
 .talks__row,
 .talks__caption {
-  display: table-row;
+  @media (--desktop-viewport) {
+    display: table-row;
+  }
 }
 
 .talks__caption {
@@ -67,31 +80,58 @@
     vertical-align: middle;
     padding-top: 1.5rem;
     padding-bottom: 0.8rem;
+
+    @media (--before-desktop-viewport) {
+      display: flex;
+      padding: 2rem 3rem;
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
 
   & + .talks__row {
+    border: 0;
     & .talks__cell {
       border: 0;
     }
   }
+
+  @media (--before-desktop-viewport) {
+    display: flex;
+    font-size: 1.5rem;
+  }
 }
 
 .talks__row {
-  & .talks__cell {
-    border-top: 1px dashed #5555df;
+  @media (--before-desktop-viewport) {
+    border-top: 2px dotted #5555df;
+    padding: 3.6rem 4.4rem;
+  }
+
+  @media (--desktop-viewport) {
+    & .talks__cell {
+      border-top: 1px dashed #5555df;
+    }
   }
 }
 
 .talks__cell {
-  display: table-cell;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 
   &:first-child {
-    font-size: 1.6rem;
-    width: 22%;
+    @media (--desktop-viewport) {
+      font-size: 1.6rem;
+      width: 22%;
+    }
+  }
+
+  @media (--desktop-viewport) {
+    display: table-cell;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -100,11 +140,20 @@
   font-size: 3.2rem;
   line-height: 1.2;
   font-weight: 700;
+
+  @media (--before-desktop-viewport) {
+    font-size: 3.7rem;
+  }
 }
 
 .talks__speaker-contact {
   font-size: 1.5rem;
   color: #12127c;
+
+  @media (--before-desktop-viewport) {
+    font-size: 1.8rem;
+    padding-top: 0.6rem;
+  }
 
   & a {
     color: inherit;
@@ -115,5 +164,12 @@
       color: var(--colorOpposite);
       text-decoration: underline;
     }
+  }
+}
+
+.talks__about {
+  @media (--before-desktop-viewport) {
+    font-size: 2.5rem;
+    padding-top: 2rem;
   }
 }

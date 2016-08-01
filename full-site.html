@@ -4,6 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Frontend Union Conf 2016</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Frontend Union Conf 2016" />
+  <meta property="og:url" content="http://frontend-union.co/" />
+  <meta property="og:image" content="http://frontend-union.co/assets/images/illustration.png" />
+  <meta property="og:description" content="Frontend Union is an organization, that brings together several communities to create a unique conference. We focus on two things: sharing knowledge and experience in frontend development and creating a warm, friendly environment, where people can meet and discuss their ideas_" />
+  <script>
+    document.documentElement.className = document.documentElement.className.replace("no-js","js");
+  </script>
   <link rel="stylesheet" href="assets/styles/bundle.css">
   <script src="assets/scripts/picturefill.js" async></script>
 </head>
@@ -17,11 +25,11 @@
 
   <header class="header" data-sticky>
     <div class="header__inner">
-      <svg class="header__logo" width="165" height="74" aria-labelledby="title">
-        <title>Frontend Union Conf</title>
+      <svg class="header__logo" width="142" height="64" aria-labelledby="title" role="img">
+        <title id="title">Frontend Union Conf</title>
         <use xlink:href="#logo" />
       </svg>
-      <nav class="header__navigation">
+      <nav class="header__navigation" data-navigation>
         <ul class="topnav">
           <li class="topnav__item">
             <a class="topnav__link" data-scroll href="#aboutSection">About</a>
@@ -30,16 +38,19 @@
             <a class="topnav__link" data-scroll href="#speakersSection">Speakers</a>
           </li>
           <li class="topnav__item">
-            <a class="topnav__link" data-scroll href="#programmeSection">Programme</a>
+            <a class="topnav__link" href="http://maps.google.com/maps?q=54.6843%2C25.2918+%28Men%C5%B3+spaustuv%C4%97%2C+%C5%A0iltadar%C5%BEio+g.+6%2C+01124+Vilnius%29" target="_blank">Location</a>
           </li>
           <li class="topnav__item">
-            <a class="topnav__link" href="http://maps.google.com/maps?q=54.6843%2C25.2918+%28Men%C5%B3+spaustuv%C4%97%2C+%C5%A0iltadar%C5%BEio+g.+6%2C+01124+Vilnius%29" target="_blank">Location</a>
+            <a class="topnav__link" data-scroll href="#partnersSection">Partners</a>
           </li>
           <li class="topnav__item">
             <a class="topnav__link topnav__link--outline" href="https://ti.to/frontend-union/2016/" target="_blank">Tickets</a>
           </li>
         </ul>
       </nav>
+      <button class="header__toggle" type="button" data-toggle aria-label="Menu toggle">
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -49,7 +60,9 @@
       <div class="intro__inner">
         <div class="intro__content">
           <h1 class="intro__title">
-            Frontend Union Conference Vilnius
+            Frontend Union<br>
+            Conference<br>
+            Vilnius
           </h1>
           <div class="infobox">
             <div class="infobox__item">
@@ -80,15 +93,7 @@
             <h2 class="colorful__title">Organisers</h2>
             <div class="colorful__text">
               <p>
-                Andrey&nbsp;Salomatin <a href="https://twitter.com/filipovskii" target="_blank">@filipovskii</a>, Egor&nbsp;Miasnikov <a href="https://twitter.com/j0gurt" target="_blank">@j0gurt</a>, Marina&nbsp;Miranovich <a href="https://twitter.com/obnoxious_mari" target="_blank">@obnoxious_mari</a>, Oksana&nbsp;Kolesa, Diana&nbsp;Aladina, Tanya&nbsp;Denisuyk <a href="https://twitter.com/deni_deniskina" target="_blank">@deni_deniskina</a>, <a href="http://itevent.by/" target="_blank">IT&nbsp;Event</a>
-              </p>
-            </div>
-          </div>
-          <div class="colorful__content">
-            <h2 class="colorful__title">Special thanks</h2>
-            <div class="colorful__text">
-              <p>
-                Denis Iogansen, Dmitry Pryshchepa, Elena Ivanova, Ilya Vakhrushev, Roman Komarov, Ruslan Kaymakov, <a href="#">Sasha Ermolenko</a>, Sergey Davydovsky, <a href="#">Vasilika Klimova</a>, <a href="#">Web Standards</a>, <a href="#">Yelena Jetpyspayeva</a>, <a href="#">Zakhar Day</a>
+                Andrey&nbsp;Salomatin <a href="https://twitter.com/filipovskii" target="_blank">@filipovskii</a>, Egor&nbsp;Miasnikov <a href="https://twitter.com/j0gurt" target="_blank">@j0gurt</a>, Marina&nbsp;Miranovich <a href="https://twitter.com/obnoxious_mari" target="_blank">@obnoxious_mari</a>, <a href="https://www.linkedin.com/in/%D0%BE%D0%BA%D1%81%D0%B0%D0%BD%D0%B0-%D0%BA%D0%BE%D0%BB%D1%91%D1%81%D0%B0-73840b9a" target="_blank">Oksana&nbsp;Kolesa</a>, Diana&nbsp;Aladina, Tanya&nbsp;Denisuyk <a href="https://twitter.com/deni_deniskina" target="_blank">@deni_deniskina</a>, <a href="http://itevent.by/" target="_blank">IT&nbsp;Event</a>
               </p>
             </div>
           </div>
@@ -112,6 +117,7 @@
     <section id="speakersSection" class="speakers" data-sticky-action>
       <div class="speakers__inner">
         <div class="speakers__columns">
+
           <div class="speakers__column">
 
             <div class="speakers__item">
@@ -119,24 +125,29 @@
                 <div class="speaker__speaker">
                   <div class="speaker__photo">
                     <picture>
-                      <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Barak.jpg">
-                      <img src="assets/images/content/speakers/mobile/Barak.jpg" width="280" height="176" alt="Barak Chamo">
-                    <picture>
+                      <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Mathias.png 1x, assets/images/content/speakers/Mathias@2x.png 2x">
+                      <img src="assets/images/content/speakers/mobile/Mathias.png" srcset="assets/images/content/speakers/mobile/Mathias@2x.png 2x" width="280" height="176" alt="Mathias Bynens">
+                    </picture>
                   </div>
                   <div class="speaker__title">
                     <h2 class="speaker__name">
-                      <span>Barak</span>
-                      <span>Chamo</span>
+                      <span>Mathias</span>
+                      <span>Bynens</span>
                     </h2>
                     <div class="speaker__about">
-                      <a href="https://twitter.com/GoFoolhardy" target="_blank">@GoFoolhardy</a>, <a href="https://github.com/barakchamo" target="_blank">_barakchamo</a>
+                      <a href="https://twitter.com/mathias" target="_blank">@mathias</a>, <a href="https://mathiasbynens.be/" target="_blank">mathiasbynens.be</a>
                     </div>
                   </div>
                 </div>
                 <div class="speaker__description">
-                  "Generative Art with CSS"
+                  "RegExp.prototype.unicode"
                   <br>
-                  London, UK
+                  Brussels, Belgium
+                </div>
+                <div class="speaker__blurb">
+                  <p>
+                  User input and string manipulation are central to development, but many engineers and even popular libraries struggle with Unicode. And ECMAScript 5 doesn’t help, with many built-in string manipulation functions offering puzzling results. Security and the need for internationalization both throw these issues into stark relief. This talk highlights the many problems related to Unicode in JavaScript regular expressions, demonstrates how ES6 aka. ES2015 helps solve these issues, and glimpses at possible future improvements to ECMAScript regular expressions.
+                  </p>
                 </div>
               </article>
             </div>
@@ -147,8 +158,8 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Princiya.jpg 1x, assets/images/content/speakers/Princiya@2x.jpg 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Princiya.jpg 1x, assets/images/content/speakers/mobile/Princiya@2x.jpg 2x" width="280" height="176" alt="Princiya Marina">
-                    <picture>
+                      <img src="assets/images/content/speakers/mobile/Princiya.jpg" srcset="assets/images/content/speakers/mobile/Princiya@2x.jpg 2x" width="280" height="176" alt="Princiya Marina">
+                    </picture>
                   </div>
                   <div class="speaker__title">
                     <h2 class="speaker__name">
@@ -165,9 +176,79 @@
                   <br>
                   Berlin, Germany
                 </div>
+                <div class="speaker__blurb">
+                  <p>
+                  Imagine, changing slides during a slideshow presentation, just by a swipe of your hand. Imagine, doing some doodles mid air and highlight an important concept from your presentation. Magical? Yes! And all of this is super fun when you learn to create your own browser plugin for NUI from scratch!
+                  </p>
+                </div>
               </article>
             </div>
+
+            <div class="speakers__item">
+              <article class="speaker">
+                <div class="speaker__speaker">
+                  <div class="speaker__photo">
+                    <picture>
+                      <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Gerard.png 1x, assets/images/content/speakers/Gerard@2x.png 2x">
+                      <img src="assets/images/content/speakers/mobile/Gerard.png" srcset="assets/images/content/speakers/mobile/Gerard@2x.png 2x" width="280" height="176" alt="Gerard Sans">
+                    </picture>
+                  </div>
+                  <div class="speaker__title">
+                    <h2 class="speaker__name">
+                      <span>Gerard</span>
+                      <span>Sans</span>
+                    </h2>
+                    <div class="speaker__about">
+                      <a href="https://twitter.com/gerardsans" target="_blank">@gerardsans</a>, <a href="https://github.com/gsans" target="_blank">_gsans</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="speaker__description">
+                  "Building Apps using Redux with Angular 2"
+                  <br>
+                  London, UK
+                </div>
+                <div class="speaker__blurb">
+                  <p>
+                  Redux is an architecture made famous by Facebook and React. It is based on Flux so it provides a solid base to create complex applications. In this talk we are going to use a basic application to showcase Redux while using Angular 2.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="speakers__item">
+              <article class="speaker">
+                <div class="speaker__speaker">
+                  <div class="speaker__photo">
+                    <picture>
+                      <source media="(min-width: 700px)" srcset="assets/images/content/speakers/Oleg.png 1x, assets/images/content/speakers/Oleg@2x.png 2x">
+                      <img src="assets/images/content/speakers/mobile/Oleg.png" srcset="assets/images/content/speakers/mobile/Oleg@2x.png 2x" width="280" height="176" alt="Oleg Podsechin">
+                    </picture>
+                  </div>
+                  <div class="speaker__title">
+                    <h2 class="speaker__name">
+                      <span>Oleg</span>
+                      <span>Podsechin</span>
+                    </h2>
+                    <div class="speaker__about">
+                      <a href="https://twitter.com/olegpodsechin" target="_blank">@olegpodsechin</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="speaker__description">
+                  "Lessons learned running JS meetups"
+                  <br>
+                  Helsinki, Finland
+                </div>
+                <div class="speaker__blurb">
+                  <p>
+                  I've been attending developer meetups for more than ten years and running them for five. I would like to share lessons learned, such as: which topics and formats work best, the pitfalls to avoid, behavior to encourage and goals to aim for. I’ll also discuss some ideas for the future and experiments that could make our communities even better.
+                  </p>
+                </div>
+              </article>
+            </div>
+
           </div>
+
           <div class="speakers__column">
             <div class="speakers__item">
               <article class="speaker">
@@ -175,8 +256,8 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Martin.jpg 1x, assets/images/content/speakers/Martin@2x.jpg 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Martin.jpg 1x, assets/images/content/speakers/mobile/Martin@2x.jpg 2x" width="280" height="176" alt="Martin Splitt">
-                    <picture>
+                      <img src="assets/images/content/speakers/mobile/Martin.jpg" srcset="assets/images/content/speakers/mobile/Martin@2x.jpg 2x" width="280" height="176" alt="Martin Splitt">
+                    </picture>
                   </div>
                   <div class="speaker__title">
                     <h2 class="speaker__name">
@@ -184,7 +265,7 @@
                       <span>Splitt</span>
                     </h2>
                     <div class="speaker__about">
-                      <a href="https://twitter.com/g33konaut" target="_blank">@g33konaut</a>, <a href="https://github.com/AVGP">_AVGP</a>
+                      <a href="https://twitter.com/g33konaut" target="_blank">@g33konaut</a>, <a href="https://github.com/AVGP" target="_blank">_AVGP</a>
                     </div>
                   </div>
                 </div>
@@ -192,6 +273,14 @@
                   "Building interactive 3D worlds in the browser with WebGL"
                   <br>
                   Zürich, Switzerland
+                </div>
+                <div class="speaker__blurb">
+                  <p>
+                  Thanks to WebGL across browsers (including those on mobile) we get control of the full graphics pipeline.
+                  </p>
+                  <p>
+                  So let’s build 3D content for everyone - from the convenience of their browsers
+                  </p>
                 </div>
               </article>
             </div>
@@ -202,8 +291,8 @@
                   <div class="speaker__photo">
                     <picture>
                       <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Fabian.jpg 1x, assets/images/content/speakers/Fabian@2x.jpg 2x">
-                      <img srcset="assets/images/content/speakers/mobile/Fabian.jpg 1x, assets/images/content/speakers/mobile/Fabian@2x.jpg 2x" width="280" height="176" alt="Fabian">
-                    <picture>
+                      <img src="assets/images/content/speakers/mobile/Fabian.jpg" srcset="assets/images/content/speakers/mobile/Fabian@2x.jpg 2x" width="280" height="176" alt="Fabian Fabian">
+                    </picture>
                   </div>
                   <div class="speaker__title">
                     <h2 class="speaker__name">
@@ -211,7 +300,7 @@
                       <span>Fabian</span>
                     </h2>
                     <div class="speaker__about">
-                      <a href="https://twitter.com/filtercake" target="_blank">@filtercake</a>, <a href="https://github.com/filtercake">_filtercake</a>
+                      <a href="https://twitter.com/filtercake" target="_blank">@filtercake</a>, <a href="https://github.com/filtercake" target="_blank">_filtercake</a>
                     </div>
                   </div>
                 </div>
@@ -220,9 +309,87 @@
                   <br>
                   Hamburg, Germany
                 </div>
+                <div class="speaker__blurb">
+                  <p>
+                  Close your gap to “that thing with the UX”. We’ll take a bird’s eye view on what UX is all about and then nosedive deep into some methods and tools. We will see how you can enhance the UX of your product the next time you work on it, with an time investment of just several minutes.
+                  </p>
+                </div>
               </article>
             </div>
-
+            <div class="speakers__item">
+              <article class="speaker">
+                <div class="speaker__speaker">
+                  <div class="speaker__photo">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="assets/images/content/speakers/Ilya.png 1x, assets/images/content/speakers/Ilya@2x.png 2x">
+                      <img src="assets/images/content/speakers/mobile/Ilya.png" srcset="assets/images/content/speakers/mobile/Ilya@2x.png 2x" width="280" height="176" alt="Ilya Pukhalski">
+                    </picture>
+                  </div>
+                  <div class="speaker__title">
+                    <h2 class="speaker__name">
+                      <span>Ilya</span>
+                      <span>Pukhalski</span>
+                    </h2>
+                    <div class="speaker__about">
+                      <a href="https://twitter.com/pukhalski" target="_blank">@pukhalski</a>, <a href="https://github.com/pukhalski" target="_blank">_pukhalski</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="speaker__description">
+                  "There is <del>an app</del> a bot for that"
+                  <br>
+                  Amsterdam, Netherlands
+                </div>
+                <div class="speaker__blurb">
+                  <p>
+                  In the last few years this world went crazy for sure. My apologies, this talk won't be about pokemons, although I have some thoughts to spread. It feels like everyone nowadays is into speaking and writing about conversational interfaces and building chat bots, stating that this is what's our future. But how do the end users perceive it? Are the chat bots at least a little useful? What are the use cases for the conversational interfaces? Are there any technical or user experience challenges in building a chat bot?
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="speakers__item">
+              <article class="speaker">
+                <div class="speaker__speaker">
+                  <div class="speaker__photo">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="assets/images/content/speakers/MartinKleppe.jpg 1x, assets/images/content/speakers/MartinKleppe@2x.jpg 2x">
+                      <img src="assets/images/content/speakers/mobile/MartinKleppe.jpg" srcset="assets/images/content/speakers/mobile/MartinKleppe@2x.jpg 2x" width="280" height="176" alt="Martin Kleppe">
+                    </picture>
+                  </div>
+                  <div class="speaker__title">
+                    <h2 class="speaker__name">
+                      <span>Martin</span>
+                      <span>Kleppe</span>
+                    </h2>
+                    <div class="speaker__about">
+                      <a href="https://twitter.com/aemkei" target="_blank">@aemkei</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="speaker__description">
+                  "Elements"
+                  <br>
+                  Hamburg, Germany
+                </div>
+                <div class="speaker__blurb">
+                  <p>
+                  This session is about the curiosity that drives us forward. It focuses on the new possibilities of JavaScript and how creative coders are using them.
+                  </p>
+                  <p>
+                  Which are the core elements of the language?
+                  </p>
+                  <p>
+                  What happens, if we reduce them to the minimum?
+                  </p>
+                  <p>
+                  And how can we puzzle them together, in the most unexpected way?
+                  </p>
+                  <p>
+                  In this mind-bending talk, Martin will explain, how to use the unknown aspects of JavaScript to make something new: Little games, small tools, and beautiful demos – all in just a bunch of bytes and out of nothing.
+                  </p>
+                </div>
+              </article>
+            </div>
 
           </div>
         </div>
@@ -230,22 +397,32 @@
     </section>
 
     <section class="contacts">
-      <div class="contacts__map"></div>
+      <div class="contacts__map" id="map"></div>
       <div class="contacts__inner">
         <div class="contacts__item">
-          10312, Antakalnio g. 17,<br>
-          Vilnius
+          <h2 class="contacts__header">Vilnus Tech Park</h2>
+          <address class="contacts__address">10312, Antakalnio g. 17</address>
         </div>
         <div class="contacts__item">
-          If there’s anything you’d like to ask us <a href="mailto:info@frontendunion.com">info@frontendunion.com</a>
+          <h3 class="contacts__subheader">Parking</h3>
+          Find the cheapest, closest parking to your destination.
+        </div>
+        <div class="contacts__item">
+          <h3 class="contacts__subheader">How to find</h3>
+          Find the cheapest, closest parking to your destination.
+        </div>
+        <div class="contacts__item">
+          If there’s anything you’d like to ask us —
+          <br>
+          <a href="mailto:info@frontendunion.com">info@frontendunion.com</a>
         </div>
       </div>
     </section>
 
     <section id="programmeSection" class="talks">
       <div class="talks__inner">
-        <div class="talks__table">
-          <div class="talks__caption">
+        <div class="talks__table" role="table">
+          <div class="talks__caption" role="row">
             <div class="talks__cell">
               11:30 — 11:50
             </div>
@@ -256,7 +433,7 @@
             </div>
           </div>
 
-          <div class="talks__row">
+          <div class="talks__row" role="row">
             <div class="talks__cell">
               12:00 — 12:45
             </div>
@@ -269,11 +446,13 @@
               </div>
             </div>
             <div class="talks__cell">
-              Three Men in a Boat (To Say Nothing of the Callback).
+              <div class="talks__about">
+                Three Men in a Boat (To Say Nothing of the Callback).
+              </div>
             </div>
           </div>
 
-          <div class="talks__row">
+          <div class="talks__row" role="row">
             <div class="talks__cell">
               12:00 — 12:45
             </div>
@@ -286,11 +465,13 @@
               </div>
             </div>
             <div class="talks__cell">
-              Three Men in a Boat (To Say Nothing of the Callback).
+              <div class="talks__about">
+                Three Men in a Boat (To Say Nothing of the Callback).
+              </div>
             </div>
           </div>
 
-          <div class="talks__row">
+          <div class="talks__row" role="row">
             <div class="talks__cell">
               12:00 — 12:45
             </div>
@@ -303,7 +484,9 @@
               </div>
             </div>
             <div class="talks__cell">
-              Three Men in a Boat (To Say Nothing of the Callback).
+              <div class="talks__about">
+                Three Men in a Boat (To Say Nothing of the Callback).
+              </div>
             </div>
           </div>
 
@@ -318,7 +501,26 @@
             </div>
           </div>
 
-          <div class="talks__row">
+          <div class="talks__row" role="row">
+            <div class="talks__cell">
+              12:00 — 12:45
+            </div>
+            <div class="talks__cell">
+              <div class="talks__speaker">
+                Varvara Stepanova
+              </div>
+              <div class="talks__speaker-contact">
+                <a href="#">@toivonens</a>, HelsinkiJS
+              </div>
+            </div>
+            <div class="talks__cell">
+              <div class="talks__about">
+                Three Men in a Boat (To Say Nothing of the Callback).
+              </div>
+            </div>
+          </div>
+
+          <div class="talks__row" role="row">
             <div class="talks__cell">
               12:00 — 12:45
             </div>
@@ -335,7 +537,7 @@
             </div>
           </div>
 
-          <div class="talks__row">
+          <div class="talks__row" role="row">
             <div class="talks__cell">
               12:00 — 12:45
             </div>
@@ -348,24 +550,9 @@
               </div>
             </div>
             <div class="talks__cell">
-              Three Men in a Boat (To Say Nothing of the Callback).
-            </div>
-          </div>
-
-          <div class="talks__row">
-            <div class="talks__cell">
-              12:00 — 12:45
-            </div>
-            <div class="talks__cell">
-              <div class="talks__speaker">
-                Varvara Stepanova
+              <div class="talks__about">
+                Three Men in a Boat (To Say Nothing of the Callback).
               </div>
-              <div class="talks__speaker-contact">
-                <a href="#">@toivonens</a>, HelsinkiJS
-              </div>
-            </div>
-            <div class="talks__cell">
-              Three Men in a Boat (To Say Nothing of the Callback).
             </div>
           </div>
 
@@ -384,92 +571,141 @@
       </div>
     </section>
 
-    <section class="sponsors">
+
+    <section class="sponsors" id="partnersSection">
       <div class="sponsors__inner">
-        <ul class="sponsors__list sponsors__list--large">
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-        </ul>
+        <header class="sponsors__header">
+          <h2 class="sponsors__title">Partners</h2>
+          <!-- <div class="sponsors__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+          </div> -->
+          <a class="sponsors__button" href="mailto:team@frontend-union.co">Participate</a>
+        </header>
 
-        <ul class="sponsors__list sponsors__list--medium">
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-        </ul>
+        <div class="sponsors-group">
+          <h3 class="sponsors-group__header">Media</h3>
+          <ul class="sponsors__list sponsors__list--large">
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+          </ul>
 
-        <ul class="sponsors__list sponsors__list--before-desktop">
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-          <li class="sponsors__item">
-            <a class="sponsors__link" href="#">
-              <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
-            </a>
-          </li>
-        </ul>
+          <h3 class="sponsors-group__header">Media</h3>
+          <ul class="sponsors__list sponsors__list--medium">
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://webnotbombs.net/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/webnotbombs.svg" alt="Web Not Bombs" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://moscowjs.ru" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/moskowjs.svg" alt="MoscowJS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://web-standards.ru/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/webstandards.svg" alt="Web Standards" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://www.smashingmagazine.com/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/smashingmagazine.svg" alt="Smashing Magazine" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/pitercss" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/pitercss.svg" alt="PiterCSS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/sofiajavascript" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/sofiajs.png" alt="SofiaJS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://apps4all.ru/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/apps4all.png" width="360" height="170" alt="Apps4All" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/KharkivJS" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/kharkivjs.jpg" alt="KharkivJS Community" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://www.facebook.com/londonJSCommunity/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/londonjs.png" alt="London JavaScript Community" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/gopiterjs" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/piterjs.png" alt="PiterJS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://gitter.im/orgs/dev-ua/rooms" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/devua.png" alt="dev-ua" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://kottans.org/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/kottans.png" alt="Kottans" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="http://kyivjs.org.ua/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/kyivjs.png" alt="KyivJS" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="https://twitter.com/angularoslo/" target="_blank">
+                <img class="sponsors__logo" src="assets/images/content/partners/media/angularjsoslo.png" alt="AngularJS Oslo" />
+              </a>
+            </li>
+          </ul>
 
+          <h3 class="sponsors-group__header">Media</h3>
+          <ul class="sponsors__list sponsors__list--small">
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+            <li class="sponsors__item">
+              <a class="sponsors__link" href="#">
+                <img class="sponsors__logo" src="assets/images/content/Booking.png" alt="Booking" />
+              </a>
+            </li>
+          </ul>
+
+        </div>
       </div>
     </section>
 
@@ -492,10 +728,16 @@
             <a class="secondary-nav__link" data-scroll href="#organisersSection">Organizers</a>
           </li>
           <li class="secondary-nav__item">
+            <a class="secondary-nav__link" data-scroll href="#partnersSection">Partners</a>
+          </li>
+          <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="https://ti.to/frontend-union/2016/" target="_blank">Tickets</a>
           </li>
           <li class="secondary-nav__item">
             <a class="secondary-nav__link" href="http://confcodeofconduct.com/" target="_blank">Code of conduct</a>
+          </li>
+          <li class="secondary-nav__item">
+            <a class="secondary-nav__link" href="http://frontend-union.co/func2015" target="_blank">FUNC 2015</a>
           </li>
         </ul>
       </div>
@@ -512,7 +754,9 @@
     </div>
   </footer>
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNqUyQxOdnmzmnQ20SUyEJgfKxP8OkRog"></script>
   <script src="assets/scripts/bundle.js"></script>
+
 </body>
 
 </html>
