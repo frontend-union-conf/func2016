@@ -92,7 +92,7 @@ let mapStyle = [{
 }];
 
 let mapIsDraggable = window.innerWidth > 480 ? true : false;
-let mapLatlng = {lat: 54.697426, lng: 25.309395};
+let mapLatlng = {lat: 54.6843129, lng: 25.2917721};
 let mapOptions = {
   zoom: 16,
   draggable: mapIsDraggable,
